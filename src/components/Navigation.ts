@@ -1,25 +1,21 @@
 import type { NavigationItem } from '../types/index.js';
-import { FullScreenManager } from '../utils/fullscreen.js';
 
 export class Navigation {
   private navElement: HTMLElement | null;
   private menuBtn: HTMLElement | null;
   private closeBtn: HTMLElement | null;
-  private fullScreenManager: FullScreenManager;
   private isMenuOpen: boolean = false;
 
   constructor() {
     this.navElement = document.querySelector('.usa-nav');
     this.menuBtn = document.querySelector('.usa-menu-btn');
     this.closeBtn = document.querySelector('.usa-nav__close');
-    this.fullScreenManager = FullScreenManager.getInstance();
 
     this.init();
   }
 
   private init(): void {
     this.setupEventListeners();
-    this.setupFullScreenToggle();
   }
 
   private setupEventListeners(): void {
@@ -52,27 +48,6 @@ export class Navigation {
     });
   }
 
-  private setupFullScreenToggle(): void {
-    // Add fullscreen toggle button to navigation
-    const navInner = document.querySelector('.usa-nav__inner');
-    if (navInner) {
-      const fullscreenBtn = document.createElement('button');
-      fullscreenBtn.className = 'usa-nav__link fullscreen-toggle';
-      fullscreenBtn.innerHTML = '<span>Fullscreen</span>';
-      fullscreenBtn.setAttribute('aria-label', 'Toggle fullscreen mode');
-      
-      fullscreenBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        this.fullScreenManager.toggleFullScreen();
-      });
-
-      // Insert before the close button
-      const closeBtn = navInner.querySelector('.usa-nav__close');
-      if (closeBtn) {
-        navInner.insertBefore(fullscreenBtn, closeBtn);
-      }
-    }
-  }
 
   private toggleMenu(): void {
     if (this.isMenuOpen) {

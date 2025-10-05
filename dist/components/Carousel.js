@@ -1,5 +1,4 @@
 import { ResponsiveManager } from '../utils/responsive.js';
-import { FullScreenManager } from '../utils/fullscreen.js';
 export class Carousel {
     constructor(containerSelector = '.carousel-wrapper') {
         this.autoplayInterval = null;
@@ -10,7 +9,6 @@ export class Carousel {
         this.prevBtn = document.querySelector('.carousel-nav.prev');
         this.nextBtn = document.querySelector('.carousel-nav.next');
         this.responsiveManager = ResponsiveManager.getInstance();
-        this.fullScreenManager = FullScreenManager.getInstance();
         this.config = {
             autoplayInterval: 5000,
             slideWidth: this.responsiveManager.getSlideWidth(),
@@ -78,8 +76,6 @@ export class Carousel {
         this.carousel.addEventListener('mouseup', this.handleMouseUp.bind(this));
         // Window resize
         this.responsiveManager.addResizeListener(this.handleResize.bind(this));
-        // Fullscreen events
-        this.fullScreenManager.addFullScreenListeners();
     }
     showSlide(index) {
         // Clamp index to valid range
@@ -145,10 +141,6 @@ export class Carousel {
         else if (e.key === 'ArrowRight') {
             this.nextSlide();
             this.handleUserInteraction();
-        }
-        else if (e.key === 'F11' || (e.key === 'f' && e.ctrlKey)) {
-            e.preventDefault();
-            this.fullScreenManager.toggleFullScreen(this.carousel);
         }
     }
     handleTouchStart(e) {

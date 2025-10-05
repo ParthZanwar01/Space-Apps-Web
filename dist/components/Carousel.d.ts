@@ -9,7 +9,6 @@ export declare class Carousel {
     private state;
     private autoplayInterval;
     private responsiveManager;
-    private fullScreenManager;
     constructor(containerSelector?: string);
     private init;
     private calculateDimensions;
