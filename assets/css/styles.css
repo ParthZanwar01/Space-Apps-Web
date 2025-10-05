@@ -591,7 +591,7 @@ body::before {
 .carousel-wrapper {
     position: relative;
     width: 100%;
-    height: 300px;
+    height: 600px;
     overflow: hidden;
     border-radius: 12px;
     background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
@@ -610,7 +610,7 @@ body::before {
 
 .carousel-slide {
     flex: 0 0 auto;
-    width: 280px;
+    width: 400px;
     height: 100%;
     display: flex !important;
     justify-content: center !important;
@@ -715,30 +715,37 @@ body::before {
     justify-content: center !important;
     align-items: center !important;
     width: 100%;
-    max-width: 280px;
+    max-width: 400px;
     height: 100% !important;
-    background: white !important;
-    border-radius: 16px !important;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1) !important;
+    background: transparent !important;
+    border-radius: 0px !important;
+    box-shadow: none !important;
     transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
     cursor: pointer !important;
-    border: 2px solid transparent !important;
+    border: none !important;
     flex-shrink: 0 !important;
     margin: 0 !important;
 }
 
 .component-card:hover {
-    transform: translateY(-8px) scale(1.02) !important;
-    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.15) !important;
-    border-color: #1a365d !important;
+    transform: scale(1.05) !important;
+    box-shadow: none !important;
 }
 
 .component-image {
-    max-width: 95% !important;
-    max-height: 95% !important;
+    width: 100% !important;
+    height: 100% !important;
     object-fit: contain !important;
-    border-radius: 8px !important;
-    padding: 5px !important;
+    border-radius: 0px !important;
+    padding: 0px !important;
+    box-shadow: none !important;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+    background: transparent !important;
+}
+
+.component-image:hover {
+    box-shadow: none !important;
+    transform: scale(1.05) !important;
 }
 
 .image-gallery {

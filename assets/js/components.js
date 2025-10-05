@@ -34,7 +34,7 @@ function initCarousel() {
         if (window.innerWidth <= 500) return 200; // 180px + 20px gap
         if (window.innerWidth <= 700) return 240; // 220px + 20px gap
         if (window.innerWidth <= 900) return 270; // 250px + 20px gap
-        return 300; // 280px + 20px gap
+        return 420; // 400px + 20px gap
     }
     
     let slideWidth = getSlideWidth();
