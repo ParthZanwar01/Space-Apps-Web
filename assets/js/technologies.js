@@ -67,6 +67,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Load navigation script
     const navScript = document.createElement('script');
-    navScript.src = 'navigation.js';
+    navScript.src = 'assets/js/navigation.js';
     document.head.appendChild(navScript);
 });
