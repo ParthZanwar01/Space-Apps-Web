@@ -47,19 +47,23 @@ body {
 }
 
 .components-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
     margin-bottom: 50px;
+    justify-content: center;
 }
 
 .component-section {
     background: linear-gradient(145deg, #1a1a2e 0%, #16213e 100%);
-    border-radius: 20px;
-    padding: 30px;
+    border-radius: 15px;
+    padding: 25px;
     border: 2px solid #00d4ff;
     transition: all 0.3s ease;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    min-width: 300px;
+    max-width: 350px;
+    flex: 1 1 300px;
 }
 
 .component-section:hover {
@@ -70,9 +74,10 @@ body {
 
 .component-images {
     display: flex;
-    gap: 15px;
+    gap: 10px;
     margin-bottom: 25px;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .component-image {
@@ -108,10 +113,11 @@ body {
 }
 
 .component-specs {
-    background: rgba(255, 221, 68, 0.1);
-    padding: 20px;
-    border-radius: 10px;
-    border-left: 4px solid #ffdd44;
+    background: rgba(0, 212, 255, 0.08);
+    padding: 18px;
+    border-radius: 8px;
+    border-left: 4px solid #00d4ff;
+    margin-top: 15px;
 }
 
 .component-specs h3 {
@@ -136,11 +142,12 @@ body {
 }
 
 .component-specs li:before {
-    content: "•";
+    content: "▸";
     color: #00d4ff;
     position: absolute;
     left: 0;
     font-weight: bold;
+    font-size: 0.8em;
 }
 
 .component-specs li:last-child {
@@ -157,6 +164,17 @@ body {
 }
 
 /* Responsive Design */
+@media (max-width: 1200px) {
+    .components-grid {
+        gap: 25px;
+    }
+
+    .component-section {
+        min-width: 280px;
+        max-width: 320px;
+    }
+}
+
 @media (max-width: 768px) {
     .container {
         padding: 15px;
@@ -171,17 +189,22 @@ body {
     }
 
     .components-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
     }
 
     .component-section {
-        padding: 20px;
+        min-width: auto;
+        max-width: 100%;
+        width: 100%;
+        max-width: 400px;
     }
 
     .component-images {
         flex-direction: column;
         align-items: center;
+        gap: 10px;
     }
 
     .component-image {
@@ -196,6 +219,7 @@ body {
 
     .component-description {
         font-size: 0.95rem;
+        text-align: left;
     }
 }
 
