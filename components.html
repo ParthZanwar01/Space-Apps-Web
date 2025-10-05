@@ -1,208 +1,286 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="usa-js-enabled">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Component Gallery - ORCA Technologies</title>
+    <title>Component Gallery - ORCA Technologies - NASA</title>
+    <link rel="stylesheet" href="node_modules/nasawds/src/css/styles.css">
     <link rel="stylesheet" href="assets/css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
-    <div class="container">
-        <header class="header">
-            <h1 class="title">Component Gallery</h1>
-            <p class="subtitle">Interactive Satellite Component Showcase</p>
-
-            <!-- Navigation Links -->
-            <div class="nav-links">
-                <a href="index.html" class="nav-link">Home</a>
-                <a href="components.html" class="nav-link active">Component Gallery</a>
-                <a href="innovation-technologies.html" class="nav-link">Technologies</a>
+<body class="usa-body">
+    <!-- NASA Header -->
+    <div class="usa-banner" role="region" aria-label="Official government website">
+        <div class="usa-banner__content">
+            <div class="usa-banner__inner">
+                <div class="usa-banner__flag">
+                    <img src="node_modules/nasawds/src/img/us_flag_small.png" alt="U.S. flag" />
+                </div>
+                <div class="usa-banner__text">
+                    <p>An official website of the United States government</p>
+                </div>
             </div>
-        </header>
+        </div>
+    </div>
 
-        <main class="main-content">
-            <!-- Component Gallery -->
-            <div class="rolling-gallery-container">
-                <div class="rolling-gallery-track">
-                    <div class="components-grid">
-                <!-- Component 1: Spool -->
-                <div class="component-section">
-                    <div class="component-images">
-                        <img src="assets/images/components/spool1.png" alt="Spool - Frontal View" class="component-image" data-component="spool">
-                        <img src="assets/images/components/spool2.png" alt="Spool - Back View" class="component-image" data-component="spool">
-                    </div>
+    <!-- Main Header -->
+    <header class="usa-header usa-header--basic" role="banner">
+        <div class="usa-nav-container">
+            <div class="usa-navbar">
+                <div class="usa-logo" id="basic-logo">
+                    <em class="usa-logo__text">
+                        <a href="/" title="Home" aria-label="ORCA Technologies">
+                            <img src="node_modules/nasawds/src/img/nasa-logo.svg" alt="NASA" class="usa-logo__image">
+                            Component Gallery
+                        </a>
+                    </em>
                 </div>
+                <button class="usa-menu-btn">Menu</button>
+            </div>
+            <nav role="navigation" class="usa-nav">
+                <div class="usa-nav__inner">
+                    <button class="usa-nav__close">
+                        <img src="node_modules/nasawds/src/img/close.svg" alt="close" />
+                    </button>
+                    <ul class="usa-nav__primary usa-accordion">
+                        <li class="usa-nav__primary-item">
+                            <a class="usa-nav__link" href="index.html">
+                                <span>Home</span>
+                            </a>
+                        </li>
+                        <li class="usa-nav__primary-item">
+                            <a class="usa-nav__link active" href="components.html">
+                                <span>Component Gallery</span>
+                            </a>
+                        </li>
+                        <li class="usa-nav__primary-item">
+                            <a class="usa-nav__link" href="innovation-technologies.html">
+                                <span>Technologies</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
 
-                <!-- Component 2: Printer -->
-                <div class="component-section">
-                    <div class="component-images">
-                        <img src="assets/images/components/printer1.png" alt="Printer - Main View" class="component-image" data-component="printer">
-                        <img src="assets/images/components/printer2.png" alt="Printer - Side View" class="component-image" data-component="printer">
-                    </div>
-                </div>
+    <main class="usa-layout-docs usa-section" id="main-content">
+        <div class="usa-layout-docs__main usa-prose">
+            <h1>Component Gallery</h1>
+            <p class="usa-intro">Interactive Satellite Component Showcase</p>
 
-                <!-- Component 3: Centrifuge -->
-                <div class="component-section">
-                    <div class="component-images">
-                        <img src="assets/images/components/centrifuge1.png" alt="Centrifuge - Main View" class="component-image" data-component="centrifuge">
-                        <img src="assets/images/components/centrifuge2.png" alt="Centrifuge - Side View" class="component-image" data-component="centrifuge">
+            <div class="component-gallery-container">
+                <div class="components-grid">
+                    <!-- Component 1: Spool -->
+                    <div class="component-card">
+                        <div class="component-images">
+                            <img src="assets/images/components/spool1.png" alt="Spool - Frontal View" class="component-image" data-component="spool">
+                            <img src="assets/images/components/spool2.png" alt="Spool - Back View" class="component-image" data-component="spool">
+                        </div>
+                        <h3 class="component-title">Spool System</h3>
                     </div>
-                </div>
 
-                <!-- Component 4: Slag/Waste Containment -->
-                <div class="component-section">
-                    <div class="component-images">
-                        <img src="assets/images/components/slugwaste1.png" alt="Slag/Waste Containment - Main View" class="component-image" data-component="slag-waste">
-                        <img src="assets/images/components/slugwaste2.png" alt="Slag/Waste Containment - Side View" class="component-image" data-component="slag-waste">
+                    <!-- Component 2: Printer -->
+                    <div class="component-card">
+                        <div class="component-images">
+                            <img src="assets/images/components/printer1.png" alt="Printer - Main View" class="component-image" data-component="printer">
+                            <img src="assets/images/components/printer2.png" alt="Printer - Side View" class="component-image" data-component="printer">
+                        </div>
+                        <h3 class="component-title">3D Printer</h3>
                     </div>
-                </div>
 
-                <!-- Component 5: Decontamination -->
-                <div class="component-section">
-                    <div class="component-images">
-                        <img src="assets/images/components/heatcont1.png" alt="Heat Decontaminator - Main View" class="component-image" data-component="decontamination">
-                        <img src="assets/images/components/heatcont2.png" alt="Heat Decontaminator - Side View" class="component-image" data-component="decontamination">
-                        <img src="assets/images/components/heatcont3.png" alt="Heat Decontaminator - Internal View" class="component-image" data-component="decontamination">
+                    <!-- Component 3: Centrifuge -->
+                    <div class="component-card">
+                        <div class="component-images">
+                            <img src="assets/images/components/centrifuge1.png" alt="Centrifuge - Main View" class="component-image" data-component="centrifuge">
+                            <img src="assets/images/components/centrifuge2.png" alt="Centrifuge - Side View" class="component-image" data-component="centrifuge">
+                        </div>
+                        <h3 class="component-title">Centrifuge</h3>
                     </div>
-                </div>
 
-                <!-- Component 6: Satellite Deposition -->
-                <div class="component-section">
-                    <div class="component-images">
-                        <img src="assets/images/technologies/debrisd1.png" alt="Satellite Deposition - Main View" class="component-image" data-component="satellite-deposition">
-                        <img src="assets/images/technologies/debrisd2.png" alt="Satellite Deposition - Side View" class="component-image" data-component="satellite-deposition">
+                    <!-- Component 4: Slag/Waste Containment -->
+                    <div class="component-card">
+                        <div class="component-images">
+                            <img src="assets/images/components/slugwaste1.png" alt="Slag/Waste Containment - Main View" class="component-image" data-component="slag-waste">
+                            <img src="assets/images/components/slugwaste2.png" alt="Slag/Waste Containment - Side View" class="component-image" data-component="slag-waste">
+                        </div>
+                        <h3 class="component-title">Waste Containment</h3>
                     </div>
-                </div>
+
+                    <!-- Component 5: Decontamination -->
+                    <div class="component-card">
+                        <div class="component-images">
+                            <img src="assets/images/components/heatcont1.png" alt="Heat Decontaminator - Main View" class="component-image" data-component="decontamination">
+                            <img src="assets/images/components/heatcont2.png" alt="Heat Decontaminator - Side View" class="component-image" data-component="decontamination">
+                            <img src="assets/images/components/heatcont3.png" alt="Heat Decontaminator - Internal View" class="component-image" data-component="decontamination">
+                        </div>
+                        <h3 class="component-title">Decontamination System</h3>
+                    </div>
+
+                    <!-- Component 6: Satellite Deposition -->
+                    <div class="component-card">
+                        <div class="component-images">
+                            <img src="assets/images/technologies/debrisd1.png" alt="Satellite Deposition - Main View" class="component-image" data-component="satellite-deposition">
+                            <img src="assets/images/technologies/debrisd2.png" alt="Satellite Deposition - Side View" class="component-image" data-component="satellite-deposition">
+                        </div>
+                        <h3 class="component-title">Satellite Deposition</h3>
                     </div>
                 </div>
             </div>
 
             <!-- Component Descriptions -->
             <div class="component-description-area" id="components-description-area">
-                <div class="description-container">
-                    <div class="component-info" id="spool-info">
-                        <h2 class="component-title">1. Spool</h2>
-                        <p class="component-description">
-                            This precision-engineered spool system enables controlled deployment and retrieval of materials
-                            in space environments. It features advanced tension control and automated winding mechanisms
-                            for reliable operation in zero gravity conditions.
-                        </p>
-                        <div class="component-specs">
-                            <h3>Technical Specifications:</h3>
-                            <ul>
-                                <li>Diameter: 150mm</li>
-                                <li>Capacity: 500m of material</li>
-                                <li>Motor: Stepper motor drive</li>
-                                <li>Material: Carbon fiber composite</li>
-                                <li>Control: Precision positioning system</li>
-                            </ul>
+                <div class="usa-card">
+                    <div class="usa-card__body">
+                        <div class="component-info" id="spool-info">
+                            <h2 class="component-title">1. Spool System</h2>
+                            <p class="component-description">
+                                This precision-engineered spool system enables controlled deployment and retrieval of materials
+                                in space environments. It features advanced tension control and automated winding mechanisms
+                                for reliable operation in zero gravity conditions.
+                            </p>
+                            <div class="component-specs">
+                                <h3>Technical Specifications</h3>
+                                <ul class="usa-list">
+                                    <li><strong>Diameter:</strong> 150mm</li>
+                                    <li><strong>Capacity:</strong> 500m of material</li>
+                                    <li><strong>Motor:</strong> Stepper motor drive</li>
+                                    <li><strong>Material:</strong> Carbon fiber composite</li>
+                                    <li><strong>Control:</strong> Precision positioning system</li>
+                                </ul>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="component-info" id="printer-info">
-                        <h2 class="component-title">2. Printer</h2>
-                        <p class="component-description">
-                            This state-of-the-art 3D printer enables on-demand manufacturing of critical components
-                            directly in space. Utilizing advanced additive manufacturing techniques, it can produce
-                            replacement parts and specialized tools with precision-engineered materials.
-                        </p>
-                        <div class="component-specs">
-                            <h3>Technical Specifications:</h3>
-                            <ul>
-                                <li>Print volume: 200mm × 200mm × 200mm</li>
-                                <li>Resolution: 0.1mm layer height</li>
-                                <li>Materials: Thermoplastic polymers</li>
-                                <li>Power consumption: 200W</li>
-                                <li>Temperature range: 180-280°C</li>
-                            </ul>
+                        <div class="component-info" id="printer-info">
+                            <h2 class="component-title">2. 3D Printer</h2>
+                            <p class="component-description">
+                                This state-of-the-art 3D printer enables on-demand manufacturing of critical components
+                                directly in space. Utilizing advanced additive manufacturing techniques, it can produce
+                                replacement parts and specialized tools with precision-engineered materials.
+                            </p>
+                            <div class="component-specs">
+                                <h3>Technical Specifications</h3>
+                                <ul class="usa-list">
+                                    <li><strong>Print volume:</strong> 200mm × 200mm × 200mm</li>
+                                    <li><strong>Resolution:</strong> 0.1mm layer height</li>
+                                    <li><strong>Materials:</strong> Thermoplastic polymers</li>
+                                    <li><strong>Power consumption:</strong> 200W</li>
+                                    <li><strong>Temperature range:</strong> 180-280°C</li>
+                                </ul>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="component-info" id="centrifuge-info">
-                        <h2 class="component-title">3. Centrifuge</h2>
-                        <p class="component-description">
-                            This high-speed centrifuge provides artificial gravity simulation and enables
-                            material separation processes in microgravity environments. Essential for
-                            scientific research and material processing applications in space missions.
-                        </p>
-                        <div class="component-specs">
-                            <h3>Technical Specifications:</h3>
-                            <ul>
-                                <li>Max RPM: 10,000</li>
-                                <li>Capacity: 6 sample tubes</li>
-                                <li>Force: Up to 10,000g</li>
-                                <li>Control: Variable speed</li>
-                                <li>Safety: Automatic imbalance detection</li>
-                            </ul>
+                        <div class="component-info" id="centrifuge-info">
+                            <h2 class="component-title">3. Centrifuge</h2>
+                            <p class="component-description">
+                                This high-speed centrifuge provides artificial gravity simulation and enables
+                                material separation processes in microgravity environments. Essential for
+                                scientific research and material processing applications in space missions.
+                            </p>
+                            <div class="component-specs">
+                                <h3>Technical Specifications</h3>
+                                <ul class="usa-list">
+                                    <li><strong>Max RPM:</strong> 10,000</li>
+                                    <li><strong>Capacity:</strong> 6 sample tubes</li>
+                                    <li><strong>Force:</strong> Up to 10,000g</li>
+                                    <li><strong>Control:</strong> Variable speed</li>
+                                    <li><strong>Safety:</strong> Automatic imbalance detection</li>
+                                </ul>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="component-info" id="slag-waste-info">
-                        <h2 class="component-title">4. Slag/Waste Containment</h2>
-                        <p class="component-description">
-                            This secure containment system safely stores and manages waste materials and
-                            manufacturing byproducts in space. Designed with multiple safety layers and
-                            environmental protection features for reliable operation in harsh space conditions.
-                        </p>
-                        <div class="component-specs">
-                            <h3>Technical Specifications:</h3>
-                            <ul>
-                                <li>Volume: 5 liters</li>
-                                <li>Material: Stainless steel</li>
-                                <li>Temperature range: -50°C to +200°C</li>
-                                <li>Pressure rating: 15 bar</li>
-                                <li>Seal: Hermetic sealing system</li>
-                            </ul>
+                        <div class="component-info" id="slag-waste-info">
+                            <h2 class="component-title">4. Waste Containment</h2>
+                            <p class="component-description">
+                                This secure containment system safely stores and manages waste materials and
+                                manufacturing byproducts in space. Designed with multiple safety layers and
+                                environmental protection features for reliable operation in harsh space conditions.
+                            </p>
+                            <div class="component-specs">
+                                <h3>Technical Specifications</h3>
+                                <ul class="usa-list">
+                                    <li><strong>Volume:</strong> 5 liters</li>
+                                    <li><strong>Material:</strong> Stainless steel</li>
+                                    <li><strong>Temperature range:</strong> -50°C to +200°C</li>
+                                    <li><strong>Pressure rating:</strong> 15 bar</li>
+                                    <li><strong>Seal:</strong> Hermetic sealing system</li>
+                                </ul>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="component-info" id="decontamination-info">
-                        <h2 class="component-title">5. Decontamination</h2>
-                        <p class="component-description">
-                            This advanced decontamination system ensures sterile conditions aboard the satellite
-                            through multi-stage cleaning and UV sterilization processes. Critical for maintaining
-                            equipment integrity and crew safety in closed space environments.
-                        </p>
-                        <div class="component-specs">
-                            <h3>Technical Specifications:</h3>
-                            <ul>
-                                <li>Method: UV sterilization + chemical cleaning</li>
-                                <li>Coverage: 360° surface treatment</li>
-                                <li>Cycle time: 30 minutes</li>
-                                <li>Power: 50W UV lamp</li>
-                                <li>Safety: Automatic shutdown systems</li>
-                            </ul>
+                        <div class="component-info" id="decontamination-info">
+                            <h2 class="component-title">5. Decontamination System</h2>
+                            <p class="component-description">
+                                This advanced decontamination system ensures sterile conditions aboard the satellite
+                                through multi-stage cleaning and UV sterilization processes. Critical for maintaining
+                                equipment integrity and crew safety in closed space environments.
+                            </p>
+                            <div class="component-specs">
+                                <h3>Technical Specifications</h3>
+                                <ul class="usa-list">
+                                    <li><strong>Method:</strong> UV sterilization + chemical cleaning</li>
+                                    <li><strong>Coverage:</strong> 360° surface treatment</li>
+                                    <li><strong>Cycle time:</strong> 30 minutes</li>
+                                    <li><strong>Power:</strong> 50W UV lamp</li>
+                                    <li><strong>Safety:</strong> Automatic shutdown systems</li>
+                                </ul>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="component-info" id="satellite-deposition-info">
-                        <h2 class="component-title">6. Satellite Deposition</h2>
-                        <p class="component-description">
-                            This precision coating system applies protective layers and specialized materials
-                            to satellite components using advanced vapor deposition technology. Essential for
-                            enhancing durability and performance in the harsh conditions of space.
-                        </p>
-                        <div class="component-specs">
-                            <h3>Technical Specifications:</h3>
-                            <ul>
-                                <li>Deposition method: Physical vapor deposition</li>
-                                <li>Thickness range: 0.1-10 microns</li>
-                                <li>Materials: Metals, ceramics, polymers</li>
-                                <li>Vacuum level: 10^-6 Torr</li>
-                                <li>Substrate heating: Up to 400°C</li>
-                            </ul>
+                        <div class="component-info" id="satellite-deposition-info">
+                            <h2 class="component-title">6. Satellite Deposition</h2>
+                            <p class="component-description">
+                                This precision coating system applies protective layers and specialized materials
+                                to satellite components using advanced vapor deposition technology. Essential for
+                                enhancing durability and performance in the harsh conditions of space.
+                            </p>
+                            <div class="component-specs">
+                                <h3>Technical Specifications</h3>
+                                <ul class="usa-list">
+                                    <li><strong>Deposition method:</strong> Physical vapor deposition</li>
+                                    <li><strong>Thickness range:</strong> 0.1-10 microns</li>
+                                    <li><strong>Materials:</strong> Metals, ceramics, polymers</li>
+                                    <li><strong>Vacuum level:</strong> 10⁻⁶ Torr</li>
+                                    <li><strong>Substrate heating:</strong> Up to 400°C</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </main>
+        </div>
+    </main>
 
-        <footer class="footer">
-            <p>&copy; 2024 ORCA - Orbital Recycling & Capture Apparatus</p>
-        </footer>
-    </div>
+    <footer class="usa-footer usa-footer--slim" role="contentinfo">
+        <div class="usa-footer__primary-section">
+            <div class="usa-footer__primary-container grid-row">
+                <div class="tablet:grid-col-8">
+                    <nav class="usa-footer__nav" aria-label="Footer navigation">
+                        <ul class="grid-row grid-gap">
+                            <li class="mobile-lg:grid-col-6 desktop:grid-col-auto usa-footer__primary-link">
+                                <a class="usa-footer__primary-link" href="index.html">Home</a>
+                            </li>
+                            <li class="mobile-lg:grid-col-6 desktop:grid-col-auto usa-footer__primary-link">
+                                <a class="usa-footer__primary-link" href="components.html">Components</a>
+                            </li>
+                            <li class="mobile-lg:grid-col-6 desktop:grid-col-auto usa-footer__primary-link">
+                                <a class="usa-footer__primary-link" href="innovation-technologies.html">Technologies</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="tablet:grid-col-4">
+                    <address class="usa-footer__address">
+                        <div class="usa-footer__contact-info">
+                            <p>&copy; 2024 ORCA - Orbital Recycling & Capture Apparatus</p>
+                            <p>A NASA Advanced Technologies Initiative</p>
+                        </div>
+                    </address>
+                </div>
+            </div>
+        </div>
+    </footer>
 
+    <script src="node_modules/nasawds/src/js/uswds.min.js"></script>
     <script src="assets/js/components.js"></script>
 </body>
 </html>

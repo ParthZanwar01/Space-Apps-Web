@@ -1,35 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="usa-js-enabled">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EBAM - Electron-Beam Additive Manufacturing - ORCA</title>
+    <title>EBAM - Electron-Beam Additive Manufacturing - NASA</title>
+    <link rel="stylesheet" href="node_modules/nasawds/src/css/styles.css">
     <link rel="stylesheet" href="assets/css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
-    <div class="container">
-        <header class="header">
-            <h1 class="title">Electron-Beam Additive Manufacturing</h1>
-            <p class="subtitle">In-Space 3D Printing Technology</p>
-
-            <!-- Navigation Links -->
-            <div class="nav-links">
-                <a href="index.html" class="nav-link">Home</a>
-                <a href="innovation-technologies.html" class="nav-link">← Back to Technologies</a>
-                <a href="ebchm.html" class="nav-link">← Previous: EBCHM</a>
-                <a href="gecko-grippers.html" class="nav-link">Next: Gecko Grippers →</a>
+<body class="usa-body">
+    <!-- NASA Header -->
+    <div class="usa-banner" role="region" aria-label="Official government website">
+        <div class="usa-banner__content">
+            <div class="usa-banner__inner">
+                <div class="usa-banner__flag">
+                    <img src="node_modules/nasawds/src/img/us_flag_small.png" alt="U.S. flag" />
+                </div>
+                <div class="usa-banner__text">
+                    <p>An official website of the United States government</p>
+                </div>
             </div>
-        </header>
+        </div>
+    </div>
 
-        <main class="main-content">
+    <!-- Main Header -->
+    <header class="usa-header usa-header--basic" role="banner">
+        <div class="usa-nav-container">
+            <div class="usa-navbar">
+                <div class="usa-logo" id="basic-logo">
+                    <em class="usa-logo__text">
+                        <a href="/" title="Home" aria-label="ORCA Technologies">
+                            <img src="node_modules/nasawds/src/img/nasa-logo.svg" alt="NASA" class="usa-logo__image">
+                            Electron-Beam Additive Manufacturing
+                        </a>
+                    </em>
+                </div>
+                <button class="usa-menu-btn">Menu</button>
+            </div>
+            <nav role="navigation" class="usa-nav">
+                <div class="usa-nav__inner">
+                    <button class="usa-nav__close">
+                        <img src="node_modules/nasawds/src/img/close.svg" alt="close" />
+                    </button>
+                    <ul class="usa-nav__primary usa-accordion">
+                        <li class="usa-nav__primary-item">
+                            <a class="usa-nav__link" href="index.html">
+                                <span>Home</span>
+                            </a>
+                        </li>
+                        <li class="usa-nav__primary-item">
+                            <a class="usa-nav__link" href="innovation-technologies.html">
+                                <span>← Technologies</span>
+                            </a>
+                        </li>
+                        <li class="usa-nav__primary-item">
+                            <a class="usa-nav__link" href="ebchm.html">
+                                <span>← Previous: EBCHM</span>
+                            </a>
+                        </li>
+                        <li class="usa-nav__primary-item">
+                            <a class="usa-nav__link" href="gecko-grippers.html">
+                                <span>Next: Gecko Grippers →</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="usa-layout-docs usa-section" id="main-content">
+        <div class="usa-layout-docs__main usa-prose">
+            <h1>Electron-Beam Additive Manufacturing</h1>
+            <p class="usa-intro">In-Space 3D Printing Technology</p>
+
             <div class="technology-content">
-                <section class="tech-section">
+                <section class="usa-section">
                     <h2>Purpose</h2>
                     <p>Enables in-space 3D printing of structural metal components using wire feedstock produced from refined debris.</p>
                 </section>
 
-                <section class="tech-section">
+                <section class="usa-section">
                     <h2>How It Works</h2>
                     <div class="process-steps">
                         <div class="step">
@@ -63,57 +113,94 @@
                     </div>
                 </section>
 
-                <section class="tech-section">
+                <section class="usa-section">
                     <h2>Why It Works Well in Space</h2>
-                    <div class="space-benefits">
-                        <div class="benefit">
+                    <div class="usa-grid usa-grid--3">
+                        <div class="usa-grid-col">
                             <h3>🛰️ Vacuum Requirements</h3>
                             <p>Electron-beam systems require vacuum and are unaffected by microgravity convection limits.</p>
                         </div>
-                        <div class="benefit">
+                        <div class="usa-grid-col">
                             <h3>🚀 Launch Optimization</h3>
                             <p>Avoids launching bulky structures from Earth — fabricate trusses, panels, frames in orbit.</p>
                         </div>
-                        <div class="benefit">
+                        <div class="usa-grid-col">
                             <h3>♻️ Material Reuse</h3>
                             <p>Uses reclaimed materials for sustainable manufacturing, based on NASA's EBF³ technology.</p>
                         </div>
                     </div>
                 </section>
 
-                <section class="tech-section">
+                <section class="usa-section">
                     <h2>Technical Specifications</h2>
-                    <div class="tech-specs">
-                        <div class="spec-item">
-                            <h4>Wire Diameter</h4>
-                            <p>1–2 mm diameter feedstock</p>
+                    <div class="usa-grid usa-grid--2">
+                        <div class="usa-grid-col">
+                            <div class="spec-item">
+                                <h4>Wire Diameter</h4>
+                                <p>1–2 mm diameter feedstock</p>
+                            </div>
                         </div>
-                        <div class="spec-item">
-                            <h4>Build Environment</h4>
-                            <p>Vacuum chamber (10⁻⁶ Torr or better)</p>
+                        <div class="usa-grid-col">
+                            <div class="spec-item">
+                                <h4>Build Environment</h4>
+                                <p>Vacuum chamber (10⁻⁶ Torr or better)</p>
+                            </div>
                         </div>
-                        <div class="spec-item">
-                            <h4>Layer Resolution</h4>
-                            <p>Sub-millimeter precision</p>
+                        <div class="usa-grid-col">
+                            <div class="spec-item">
+                                <h4>Layer Resolution</h4>
+                                <p>Sub-millimeter precision</p>
+                            </div>
                         </div>
-                        <div class="spec-item">
-                            <h4>Output Quality</h4>
-                            <p>Near-net-shape with minimal porosity</p>
+                        <div class="usa-grid-col">
+                            <div class="spec-item">
+                                <h4>Output Quality</h4>
+                                <p>Near-net-shape with minimal porosity</p>
+                            </div>
                         </div>
-                        <div class="spec-item">
-                            <h4>Heritage Technology</h4>
-                            <p>Based on NASA's Electron Beam Freeform Fabrication (EBF³)</p>
+                        <div class="usa-grid-col">
+                            <div class="spec-item">
+                                <h4>Heritage Technology</h4>
+                                <p>Based on NASA's Electron Beam Freeform Fabrication (EBF³)</p>
+                            </div>
                         </div>
                     </div>
                 </section>
             </div>
-        </main>
+        </div>
+    </main>
 
-        <footer class="footer">
-            <p>&copy; 2024 ORCA - Orbital Recycling & Capture Apparatus</p>
-        </footer>
-    </div>
+    <footer class="usa-footer usa-footer--slim" role="contentinfo">
+        <div class="usa-footer__primary-section">
+            <div class="usa-footer__primary-container grid-row">
+                <div class="tablet:grid-col-8">
+                    <nav class="usa-footer__nav" aria-label="Footer navigation">
+                        <ul class="grid-row grid-gap">
+                            <li class="mobile-lg:grid-col-6 desktop:grid-col-auto usa-footer__primary-link">
+                                <a class="usa-footer__primary-link" href="index.html">Home</a>
+                            </li>
+                            <li class="mobile-lg:grid-col-6 desktop:grid-col-auto usa-footer__primary-link">
+                                <a class="usa-footer__primary-link" href="innovation-technologies.html">Technologies</a>
+                            </li>
+                            <li class="mobile-lg:grid-col-6 desktop:grid-col-auto usa-footer__primary-link">
+                                <a class="usa-footer__primary-link" href="gecko-grippers.html">Gecko Grippers</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="tablet:grid-col-4">
+                    <address class="usa-footer__address">
+                        <div class="usa-footer__contact-info">
+                            <p>&copy; 2024 ORCA - Orbital Recycling & Capture Apparatus</p>
+                            <p>A NASA Advanced Technologies Initiative</p>
+                        </div>
+                    </address>
+                </div>
+            </div>
+        </div>
+    </footer>
 
+    <script src="node_modules/nasawds/src/js/uswds.min.js"></script>
     <script src="assets/js/navigation.js"></script>
 </body>
 </html>
