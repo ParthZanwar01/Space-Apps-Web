@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body class="usa-body">
+    <div class="page-wrapper">
     <!-- NASA Header -->
     <div class="usa-banner" role="region" aria-label="Official government website">
         <div class="usa-banner__content">
@@ -63,224 +64,84 @@
         </div>
     </header>
 
-    <main class="usa-layout-docs usa-section" id="main-content">
+        <div class="main-container">
+            <div class="content-wrapper">
+                <main class="usa-layout-docs usa-section" id="main-content">
         <div class="usa-layout-docs__main usa-prose">
             <h1>Component Gallery</h1>
             <p class="usa-intro">Interactive Satellite Component Showcase</p>
 
             <div class="component-gallery-container">
-                <div class="components-grid">
-                    <!-- Component 1: Spool -->
-                    <div class="component-card">
-                        <div class="component-images">
-                            <img src="assets/images/components/spool1.png" alt="Spool - Frontal View" class="component-image" data-component="spool">
-                            <img src="assets/images/components/spool2.png" alt="Spool - Back View" class="component-image" data-component="spool">
+                <div class="carousel-wrapper">
+                    <div class="carousel-slide active" data-slide="0">
+                        <div class="component-card" data-component="spool">
+                            <img src="assets/images/components/spool1.png" alt="Spool System" class="component-image">
                         </div>
-                        <h3 class="component-title">Spool System</h3>
+                    </div>
+                    <div class="carousel-slide" data-slide="1">
+                        <div class="component-card" data-component="printer">
+                            <img src="assets/images/components/printer1.png" alt="3D Printer" class="component-image">
+                        </div>
+                    </div>
+                    <div class="carousel-slide" data-slide="2">
+                        <div class="component-card" data-component="centrifuge">
+                            <img src="assets/images/components/centrifuge1.png" alt="Centrifuge" class="component-image">
+                        </div>
+                    </div>
+                    <div class="carousel-slide" data-slide="3">
+                        <div class="component-card" data-component="slag-waste">
+                            <img src="assets/images/components/slugwaste1.png" alt="Waste Containment" class="component-image">
+                        </div>
+                    </div>
+                    <div class="carousel-slide" data-slide="4">
+                        <div class="component-card" data-component="decontamination">
+                            <img src="assets/images/components/heatcont1.png" alt="Decontamination System" class="component-image">
+                        </div>
+                    </div>
+                    <div class="carousel-slide" data-slide="5">
+                        <div class="component-card" data-component="satellite-deposition">
+                            <img src="assets/images/technologies/debrisd1.png" alt="Satellite Deposition" class="component-image">
+                        </div>
                     </div>
 
-                    <!-- Component 2: Printer -->
-                    <div class="component-card">
-                        <div class="component-images">
-                            <img src="assets/images/components/printer1.png" alt="Printer - Main View" class="component-image" data-component="printer">
-                            <img src="assets/images/components/printer2.png" alt="Printer - Side View" class="component-image" data-component="printer">
-                        </div>
-                        <h3 class="component-title">3D Printer</h3>
-                    </div>
+                    <!-- Navigation arrows -->
+                    <button class="carousel-nav prev" aria-label="Previous slide">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                        </svg>
+                    </button>
+                    <button class="carousel-nav next" aria-label="Next slide">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z"/>
+                        </svg>
+                    </button>
 
-                    <!-- Component 3: Centrifuge -->
-                    <div class="component-card">
-                        <div class="component-images">
-                            <img src="assets/images/components/centrifuge1.png" alt="Centrifuge - Main View" class="component-image" data-component="centrifuge">
-                            <img src="assets/images/components/centrifuge2.png" alt="Centrifuge - Side View" class="component-image" data-component="centrifuge">
-                        </div>
-                        <h3 class="component-title">Centrifuge</h3>
-                    </div>
-
-                    <!-- Component 4: Slag/Waste Containment -->
-                    <div class="component-card">
-                        <div class="component-images">
-                            <img src="assets/images/components/slugwaste1.png" alt="Slag/Waste Containment - Main View" class="component-image" data-component="slag-waste">
-                            <img src="assets/images/components/slugwaste2.png" alt="Slag/Waste Containment - Side View" class="component-image" data-component="slag-waste">
-                        </div>
-                        <h3 class="component-title">Waste Containment</h3>
-                    </div>
-
-                    <!-- Component 5: Decontamination -->
-                    <div class="component-card">
-                        <div class="component-images">
-                            <img src="assets/images/components/heatcont1.png" alt="Heat Decontaminator - Main View" class="component-image" data-component="decontamination">
-                            <img src="assets/images/components/heatcont2.png" alt="Heat Decontaminator - Side View" class="component-image" data-component="decontamination">
-                            <img src="assets/images/components/heatcont3.png" alt="Heat Decontaminator - Internal View" class="component-image" data-component="decontamination">
-                        </div>
-                        <h3 class="component-title">Decontamination System</h3>
-                    </div>
-
-                    <!-- Component 6: Satellite Deposition -->
-                    <div class="component-card">
-                        <div class="component-images">
-                            <img src="assets/images/technologies/debrisd1.png" alt="Satellite Deposition - Main View" class="component-image" data-component="satellite-deposition">
-                            <img src="assets/images/technologies/debrisd2.png" alt="Satellite Deposition - Side View" class="component-image" data-component="satellite-deposition">
-                        </div>
-                        <h3 class="component-title">Satellite Deposition</h3>
+                    <!-- Dot indicators -->
+                    <div class="carousel-dots">
+                        <button class="carousel-dot active" data-slide="0" aria-label="Go to slide 1"></button>
+                        <button class="carousel-dot" data-slide="1" aria-label="Go to slide 2"></button>
+                        <button class="carousel-dot" data-slide="2" aria-label="Go to slide 3"></button>
+                        <button class="carousel-dot" data-slide="3" aria-label="Go to slide 4"></button>
+                        <button class="carousel-dot" data-slide="4" aria-label="Go to slide 5"></button>
+                        <button class="carousel-dot" data-slide="5" aria-label="Go to slide 6"></button>
                     </div>
                 </div>
             </div>
 
-            <!-- Component Descriptions -->
-            <div class="component-description-area" id="components-description-area">
-                <div class="usa-card">
-                    <div class="usa-card__body">
-                        <div class="component-info" id="spool-info">
-                            <h2 class="component-title">1. Spool System</h2>
-                            <p class="component-description">
-                                This precision-engineered spool system enables controlled deployment and retrieval of materials
-                                in space environments. It features advanced tension control and automated winding mechanisms
-                                for reliable operation in zero gravity conditions.
-                            </p>
-                            <div class="component-specs">
-                                <h3>Technical Specifications</h3>
-                                <ul class="usa-list">
-                                    <li><strong>Diameter:</strong> 150mm</li>
-                                    <li><strong>Capacity:</strong> 500m of material</li>
-                                    <li><strong>Motor:</strong> Stepper motor drive</li>
-                                    <li><strong>Material:</strong> Carbon fiber composite</li>
-                                    <li><strong>Control:</strong> Precision positioning system</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="component-info" id="printer-info">
-                            <h2 class="component-title">2. 3D Printer</h2>
-                            <p class="component-description">
-                                This state-of-the-art 3D printer enables on-demand manufacturing of critical components
-                                directly in space. Utilizing advanced additive manufacturing techniques, it can produce
-                                replacement parts and specialized tools with precision-engineered materials.
-                            </p>
-                            <div class="component-specs">
-                                <h3>Technical Specifications</h3>
-                                <ul class="usa-list">
-                                    <li><strong>Print volume:</strong> 200mm × 200mm × 200mm</li>
-                                    <li><strong>Resolution:</strong> 0.1mm layer height</li>
-                                    <li><strong>Materials:</strong> Thermoplastic polymers</li>
-                                    <li><strong>Power consumption:</strong> 200W</li>
-                                    <li><strong>Temperature range:</strong> 180-280°C</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="component-info" id="centrifuge-info">
-                            <h2 class="component-title">3. Centrifuge</h2>
-                            <p class="component-description">
-                                This high-speed centrifuge provides artificial gravity simulation and enables
-                                material separation processes in microgravity environments. Essential for
-                                scientific research and material processing applications in space missions.
-                            </p>
-                            <div class="component-specs">
-                                <h3>Technical Specifications</h3>
-                                <ul class="usa-list">
-                                    <li><strong>Max RPM:</strong> 10,000</li>
-                                    <li><strong>Capacity:</strong> 6 sample tubes</li>
-                                    <li><strong>Force:</strong> Up to 10,000g</li>
-                                    <li><strong>Control:</strong> Variable speed</li>
-                                    <li><strong>Safety:</strong> Automatic imbalance detection</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="component-info" id="slag-waste-info">
-                            <h2 class="component-title">4. Waste Containment</h2>
-                            <p class="component-description">
-                                This secure containment system safely stores and manages waste materials and
-                                manufacturing byproducts in space. Designed with multiple safety layers and
-                                environmental protection features for reliable operation in harsh space conditions.
-                            </p>
-                            <div class="component-specs">
-                                <h3>Technical Specifications</h3>
-                                <ul class="usa-list">
-                                    <li><strong>Volume:</strong> 5 liters</li>
-                                    <li><strong>Material:</strong> Stainless steel</li>
-                                    <li><strong>Temperature range:</strong> -50°C to +200°C</li>
-                                    <li><strong>Pressure rating:</strong> 15 bar</li>
-                                    <li><strong>Seal:</strong> Hermetic sealing system</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="component-info" id="decontamination-info">
-                            <h2 class="component-title">5. Decontamination System</h2>
-                            <p class="component-description">
-                                This advanced decontamination system ensures sterile conditions aboard the satellite
-                                through multi-stage cleaning and UV sterilization processes. Critical for maintaining
-                                equipment integrity and crew safety in closed space environments.
-                            </p>
-                            <div class="component-specs">
-                                <h3>Technical Specifications</h3>
-                                <ul class="usa-list">
-                                    <li><strong>Method:</strong> UV sterilization + chemical cleaning</li>
-                                    <li><strong>Coverage:</strong> 360° surface treatment</li>
-                                    <li><strong>Cycle time:</strong> 30 minutes</li>
-                                    <li><strong>Power:</strong> 50W UV lamp</li>
-                                    <li><strong>Safety:</strong> Automatic shutdown systems</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="component-info" id="satellite-deposition-info">
-                            <h2 class="component-title">6. Satellite Deposition</h2>
-                            <p class="component-description">
-                                This precision coating system applies protective layers and specialized materials
-                                to satellite components using advanced vapor deposition technology. Essential for
-                                enhancing durability and performance in the harsh conditions of space.
-                            </p>
-                            <div class="component-specs">
-                                <h3>Technical Specifications</h3>
-                                <ul class="usa-list">
-                                    <li><strong>Deposition method:</strong> Physical vapor deposition</li>
-                                    <li><strong>Thickness range:</strong> 0.1-10 microns</li>
-                                    <li><strong>Materials:</strong> Metals, ceramics, polymers</li>
-                                    <li><strong>Vacuum level:</strong> 10⁻⁶ Torr</li>
-                                    <li><strong>Substrate heating:</strong> Up to 400°C</li>
-                                </ul>
-                            </div>
-                        </div>
+            <!-- Component Details Popup -->
+            <div id="details-popup" class="details-popup" style="display: none;">
+                <div class="details-content">
+                    <button class="details-close" onclick="closeDetails()" aria-label="Close details">&times;</button>
+                    <div id="popup-details" class="popup-details">
+                        <!-- Component details will be populated here by JavaScript -->
                     </div>
                 </div>
             </div>
         </div>
-    </main>
-
-    <footer class="usa-footer usa-footer--slim" role="contentinfo">
-        <div class="usa-footer__primary-section">
-            <div class="usa-footer__primary-container grid-row">
-                <div class="tablet:grid-col-8">
-                    <nav class="usa-footer__nav" aria-label="Footer navigation">
-                        <ul class="grid-row grid-gap">
-                            <li class="mobile-lg:grid-col-6 desktop:grid-col-auto usa-footer__primary-link">
-                                <a class="usa-footer__primary-link" href="index.html">Home</a>
-                            </li>
-                            <li class="mobile-lg:grid-col-6 desktop:grid-col-auto usa-footer__primary-link">
-                                <a class="usa-footer__primary-link" href="components.html">Components</a>
-                            </li>
-                            <li class="mobile-lg:grid-col-6 desktop:grid-col-auto usa-footer__primary-link">
-                                <a class="usa-footer__primary-link" href="innovation-technologies.html">Technologies</a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="tablet:grid-col-4">
-                    <address class="usa-footer__address">
-                        <div class="usa-footer__contact-info">
-                            <p>&copy; 2024 ORCA - Orbital Recycling & Capture Apparatus</p>
-                            <p>A NASA Advanced Technologies Initiative</p>
-                        </div>
-                    </address>
-                </div>
-            </div>
-        </div>
-    </footer>
+    </div>
 
     <script src="assets/js/uswds.min.js"></script>
+    <script src="assets/js/script.js"></script>
     <script src="assets/js/components.js"></script>
 </body>
 </html>

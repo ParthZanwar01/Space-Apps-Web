@@ -117,8 +117,22 @@ function showComponentDetails(componentType) {
     const popup = document.getElementById('details-popup');
     const details = document.getElementById('popup-details');
 
+    // Get the image source for this component
+    let imageSrc = '';
+    const componentCards = document.querySelectorAll(`[data-component="${componentType}"]`);
+    if (componentCards.length > 0) {
+        const img = componentCards[0].querySelector('.component-image');
+        if (img) {
+            imageSrc = img.src;
+        }
+    }
+
     details.innerHTML = `
         <h3>${data.name}</h3>
+        ${imageSrc ? `
+        <div class="component-preview">
+            <img src="${imageSrc}" alt="${data.name}" />
+        </div>` : ''}
         <div class="function">
             <h4>Function</h4>
             <p>${data.function}</p>
@@ -165,7 +179,9 @@ popupStyle.textContent = `
         100% { transform: scale(1); }
     }
 `;
-document.head.appendChild(popupStyle);
+if (document.head) {
+    document.head.appendChild(popupStyle);
+}
 
 // Initialize card-based interaction system
 document.addEventListener('DOMContentLoaded', function() {
@@ -179,74 +195,9 @@ document.addEventListener('DOMContentLoaded', function() {
             card.style.transition = 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
             card.style.opacity = '1';
             card.style.transform = 'translateY(0)';
-        }, 200 + (index * 150));
+        }, 200 + (index * 100));
     });
 });
 
-// Add tooltip functionality
-function createTooltip(element, text) {
-    const tooltip = document.createElement('div');
-    tooltip.className = 'tooltip';
-    tooltip.textContent = text;
-    tooltip.style.cssText = `
-        position: absolute;
-        background: rgba(0, 0, 0, 0.9);
-        color: white;
-        padding: 8px 12px;
-        border-radius: 6px;
-        font-size: 0.8rem;
-        pointer-events: none;
-        z-index: 1000;
-        opacity: 0;
-        transition: opacity 0.3s ease;
-        white-space: nowrap;
-    `;
-    
-    document.body.appendChild(tooltip);
-    
-    element.addEventListener('mouseenter', function(e) {
-        const rect = element.getBoundingClientRect();
-        tooltip.style.left = rect.left + rect.width / 2 + 'px';
-        tooltip.style.top = rect.top - 35 + 'px';
-        tooltip.style.opacity = '1';
-    });
-    
-    element.addEventListener('mouseleave', function() {
-        tooltip.style.opacity = '0';
-    });
-    
-    element.addEventListener('mousemove', function(e) {
-        tooltip.style.left = e.clientX + 10 + 'px';
-        tooltip.style.top = e.clientY - 35 + 'px';
-    });
-}
+// Tooltip functionality removed to prevent JavaScript errors
 
-// Initialize tooltips for components
-document.addEventListener('DOMContentLoaded', function() {
-    const components = document.querySelectorAll('.component');
-    components.forEach(component => {
-        const componentType = component.getAttribute('data-component');
-        const data = componentData[componentType];
-        if (data) {
-            createTooltip(component, `Click to learn about ${data.name}`);
-        }
-    });
-});
-
-// Add keyboard shortcuts info
-document.addEventListener('DOMContentLoaded', function() {
-    const infoPanel = document.querySelector('.info-panel');
-    const keyboardInfo = document.createElement('div');
-    keyboardInfo.className = 'keyboard-shortcuts';
-    keyboardInfo.innerHTML = `
-        <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid rgba(0, 212, 255, 0.2);">
-            <h4 style="color: #00d4ff; margin-bottom: 10px;">Keyboard Shortcuts</h4>
-            <p style="color: #b8c5d6; font-size: 0.9rem;">
-                Press keys 1-6 to quickly access components:<br>
-                1: Momentum Wheel | 2: Equipment Shelf | 3: Suspension<br>
-                4: Storage Unit | 5: Cooling Fan | 6: Mounting Point
-            </p>
-        </div>
-    `;
-    infoPanel.appendChild(keyboardInfo);
-});
