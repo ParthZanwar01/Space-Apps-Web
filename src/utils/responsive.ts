@@ -1,4 +1,4 @@
-import { WindowDimensions, ResponsiveBreakpoints } from '../types/index.js';
+import type { WindowDimensions, ResponsiveBreakpoints } from '../types/index.js';
 
 export class ResponsiveManager {
   private static instance: ResponsiveManager;

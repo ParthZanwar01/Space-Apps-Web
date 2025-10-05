@@ -1,0 +1,36 @@
+export declare class Carousel {
+    private carousel;
+    private carouselContainer;
+    private slides;
+    private dots;
+    private prevBtn;
+    private nextBtn;
+    private config;
+    private state;
+    private autoplayInterval;
+    private responsiveManager;
+    private fullScreenManager;
+    constructor(containerSelector?: string);
+    private init;
+    private calculateDimensions;
+    private setupEventListeners;
+    private showSlide;
+    private nextSlide;
+    private prevSlide;
+    private updateNavigationButtons;
+    private startAutoplay;
+    private stopAutoplay;
+    private handleUserInteraction;
+    private handleKeydown;
+    private handleTouchStart;
+    private handleTouchMove;
+    private handleTouchEnd;
+    private handleMouseDown;
+    private handleMouseMove;
+    private handleMouseUp;
+    private handleResize;
+    private initComponentCards;
+    private showComponentDetails;
+    destroy(): void;
+}
+//# sourceMappingURL=Carousel.d.ts.map

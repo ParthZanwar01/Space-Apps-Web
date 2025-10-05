@@ -1,4 +1,4 @@
-import { CarouselConfig, CarouselState, TouchEvent, MouseEvent, ComponentData } from '../types/index.js';
+import type { CarouselConfig, CarouselState } from '../types/index.js';
 import { ResponsiveManager } from '../utils/responsive.js';
 import { FullScreenManager } from '../utils/fullscreen.js';
 
@@ -122,15 +122,17 @@ export class Carousel {
 
     // Show current slide
     if (this.slides[index]) {
-      this.slides[index].classList.add('active');
+      this.slides[index]!.classList.add('active');
     }
     if (this.dots[index]) {
-      this.dots[index].classList.add('active');
+      this.dots[index]!.classList.add('active');
     }
 
     // Move carousel container
     const translateX = -index * this.config.slideWidth;
-    this.carouselContainer!.style.transform = `translateX(${translateX}px)`;
+    if (this.carouselContainer) {
+      this.carouselContainer.style.transform = `translateX(${translateX}px)`;
+    }
 
     this.state.currentSlide = index;
     this.updateNavigationButtons();
@@ -190,24 +192,26 @@ export class Carousel {
     }
   }
 
-  private handleTouchStart(e: TouchEvent): void {
-    this.state.touchStart.startX = e.touches[0].clientX;
-    this.state.touchStart.startY = e.touches[0].clientY;
+  private handleTouchStart(e: globalThis.TouchEvent): void {
+    if (e.touches.length === 0) return;
+    this.state.touchStart.startX = e.touches[0]!.clientX;
+    this.state.touchStart.startY = e.touches[0]!.clientY;
     this.state.touchStart.isDragging = true;
     this.state.isDragging = true;
     this.stopAutoplay();
   }
 
-  private handleTouchMove(e: TouchEvent): void {
+  private handleTouchMove(e: globalThis.TouchEvent): void {
     if (!this.state.touchStart.isDragging) return;
     e.preventDefault();
   }
 
-  private handleTouchEnd(e: TouchEvent): void {
+  private handleTouchEnd(e: globalThis.TouchEvent): void {
     if (!this.state.touchStart.isDragging) return;
     
-    this.state.touchStart.endX = e.changedTouches[0].clientX;
-    this.state.touchStart.endY = e.changedTouches[0].clientY;
+    if (e.changedTouches.length === 0) return;
+    this.state.touchStart.endX = e.changedTouches[0]!.clientX;
+    this.state.touchStart.endY = e.changedTouches[0]!.clientY;
     const diffX = this.state.touchStart.startX - this.state.touchStart.endX;
     const diffY = this.state.touchStart.startY - this.state.touchStart.endY;
     
@@ -225,7 +229,7 @@ export class Carousel {
     setTimeout(() => this.startAutoplay(), 10000);
   }
 
-  private handleMouseDown(e: MouseEvent): void {
+  private handleMouseDown(e: globalThis.MouseEvent): void {
     this.state.mouseStart.startX = e.clientX;
     this.state.mouseStart.isDragging = true;
     this.state.isDragging = true;
@@ -233,12 +237,12 @@ export class Carousel {
     e.preventDefault();
   }
 
-  private handleMouseMove(e: MouseEvent): void {
+  private handleMouseMove(e: globalThis.MouseEvent): void {
     if (!this.state.mouseStart.isDragging) return;
     e.preventDefault();
   }
 
-  private handleMouseUp(e: MouseEvent): void {
+  private handleMouseUp(e: globalThis.MouseEvent): void {
     if (!this.state.mouseStart.isDragging) return;
     
     const diffX = this.state.mouseStart.startX - e.clientX;
@@ -264,7 +268,9 @@ export class Carousel {
     } else {
       // Recalculate position with new slide width
       const translateX = -this.state.currentSlide * this.config.slideWidth;
-      this.carouselContainer!.style.transform = `translateX(${translateX}px)`;
+      if (this.carouselContainer) {
+        this.carouselContainer.style.transform = `translateX(${translateX}px)`;
+      }
       this.updateNavigationButtons();
     }
   }

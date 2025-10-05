@@ -1,4 +1,4 @@
-import { FullScreenConfig } from '../types/index.js';
+import type { FullScreenConfig } from '../types/index.js';
 
 export class FullScreenManager {
   private static instance: FullScreenManager;

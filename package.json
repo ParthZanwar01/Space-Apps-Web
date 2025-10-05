@@ -13,7 +13,7 @@
     "nasawds": "^4.0.70"
   },
   "devDependencies": {
-    "typescript": "^5.0.0",
-    "@types/node": "^20.0.0"
+    "@types/node": "^20.19.19",
+    "typescript": "^5.9.3"
   }
 }
