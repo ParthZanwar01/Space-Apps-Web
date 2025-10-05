@@ -46,13 +46,27 @@ body {
     flex: 1;
 }
 
+.rolling-gallery-container {
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.rolling-gallery-track {
+    display: flex;
+    gap: 25px;
+    animation: rolling-gallery 45s linear infinite;
+    width: max-content;
+}
+
+.rolling-gallery-container:hover .rolling-gallery-track {
+    animation-play-state: paused;
+}
+
 .components-grid {
     display: flex;
-    flex-wrap: wrap;
     gap: 25px;
-    margin-bottom: 50px;
-    justify-content: center;
-    align-items: stretch;
+    flex-shrink: 0;
 }
 
 .component-section {
@@ -198,9 +212,14 @@ body {
         font-size: 1rem;
     }
 
+    .rolling-gallery-track {
+        animation-play-state: paused;
+        justify-content: center;
+    }
+
     .components-grid {
-        flex-direction: column;
-        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
         gap: 25px;
     }
 
@@ -247,5 +266,15 @@ body {
 
     .component-specs {
         padding: 15px;
+    }
+}
+
+/* Rolling Gallery Animation */
+@keyframes rolling-gallery {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
     }
 }
