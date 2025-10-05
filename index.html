@@ -10,195 +10,308 @@
 <body>
     <div class="container">
         <header class="header">
-            <h1 class="title">Satellite Prototype</h1>
-            <p class="subtitle">Component Gallery</p>
+            <h1 class="title">ORCA Technologies & Components</h1>
+            <p class="subtitle">Technologies Powering Orbital Recycling & Capture Apparatus</p>
+
+            <!-- Navigation Tabs -->
+            <div class="nav-tabs">
+                <button class="nav-tab active" data-view="components">Component Gallery</button>
+                <button class="nav-tab" data-view="technologies">ORCA Technologies</button>
+            </div>
         </header>
 
         <main class="main-content">
-            <!-- Component Selection Dropdown -->
-            <div class="component-selector">
-                <label for="component-select" class="selector-label">Select Component:</label>
-                <select id="component-select" class="component-dropdown">
-                    <option value="">Choose a component...</option>
-                    <option value="spool" selected>1. Spool</option>
-                    <option value="printer">2. Printer</option>
-                    <option value="centrifuge">3. Centrifuge</option>
-                    <option value="slag-waste">4. Slag/Waste Containment</option>
-                    <option value="decontamination">5. Decontamination</option>
-                    <option value="satellite-deposition">6. Satellite Deposition</option>
-                </select>
-            </div>
+            <!-- View Containers -->
+            <div id="components-view" class="view-container active">
+                <!-- Original Component Gallery -->
+                <div class="rolling-gallery-container">
+                    <div class="rolling-gallery-track">
+                        <div class="components-grid">
+                    <!-- Component 1: Spool -->
+                    <div class="component-section">
+                        <div class="component-images">
+                            <img src="spool1.png" alt="Spool - Frontal View" class="component-image" data-component="spool">
+                            <img src="spool2.png" alt="Spool - Back View" class="component-image" data-component="spool">
+                        </div>
+                    </div>
 
-            <!-- Single Component Display -->
-            <div class="rolling-gallery-container">
-                <div class="rolling-gallery-track">
-                    <div class="components-grid">
-                        <!-- Component 1: Spool -->
-                        <div class="component-section" data-component="spool">
-                            <div class="component-images">
-                                <img src="spool1.png" alt="Spool - Frontal View" class="component-image" data-component="spool">
-                                <img src="spool2.png" alt="Spool - Back View" class="component-image" data-component="spool">
+                    <!-- Component 2: Printer -->
+                    <div class="component-section">
+                        <div class="component-images">
+                            <img src="printer1.png" alt="Printer - Main View" class="component-image" data-component="printer">
+                            <img src="printer2.png" alt="Printer - Side View" class="component-image" data-component="printer">
+                        </div>
+                    </div>
+
+                    <!-- Component 3: Centrifuge -->
+                    <div class="component-section">
+                        <div class="component-images">
+                            <img src="centrifuge1.png" alt="Centrifuge - Main View" class="component-image" data-component="centrifuge">
+                            <img src="centrifuge2.png" alt="Centrifuge - Side View" class="component-image" data-component="centrifuge">
+                        </div>
+                    </div>
+
+                    <!-- Component 4: Slag/Waste Containment -->
+                    <div class="component-section">
+                        <div class="component-images">
+                            <img src="slugwaste1.png" alt="Slag/Waste Containment - Main View" class="component-image" data-component="slag-waste">
+                            <img src="slugwaste2.png" alt="Slag/Waste Containment - Side View" class="component-image" data-component="slag-waste">
+                        </div>
+                    </div>
+
+                    <!-- Component 5: Decontamination -->
+                    <div class="component-section">
+                        <div class="component-images">
+                            <img src="heatcont1.png" alt="Heat Decontaminator - Main View" class="component-image" data-component="decontamination">
+                            <img src="heatcont2.png" alt="Heat Decontaminator - Side View" class="component-image" data-component="decontamination">
+                            <img src="heatcont3.png" alt="Heat Decontaminator - Internal View" class="component-image" data-component="decontamination">
+                        </div>
+                    </div>
+
+                    <!-- Component 6: Satellite Deposition -->
+                    <div class="component-section">
+                        <div class="component-images">
+                            <img src="debrisd1.png" alt="Satellite Deposition - Main View" class="component-image" data-component="satellite-deposition">
+                            <img src="debrisd2.png" alt="Satellite Deposition - Side View" class="component-image" data-component="satellite-deposition">
+                        </div>
+                    </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Original Component Descriptions -->
+                <div class="component-description-area" id="components-description-area">
+                    <div class="description-container">
+                        <div class="component-info" id="spool-info">
+                            <h2 class="component-title">1. Spool</h2>
+                            <p class="component-description">
+                                This precision-engineered spool system enables controlled deployment and retrieval of materials
+                                in space environments. It features advanced tension control and automated winding mechanisms
+                                for reliable operation in zero gravity conditions.
+                            </p>
+                            <div class="component-specs">
+                                <h3>Technical Specifications:</h3>
+                                <ul>
+                                    <li>Diameter: 150mm</li>
+                                    <li>Capacity: 500m of material</li>
+                                    <li>Motor: Stepper motor drive</li>
+                                    <li>Material: Carbon fiber composite</li>
+                                    <li>Control: Precision positioning system</li>
+                                </ul>
                             </div>
                         </div>
 
-                        <!-- Component 2: Printer -->
-                        <div class="component-section" data-component="printer">
-                            <div class="component-images">
-                                <img src="printer1.png" alt="Printer - Main View" class="component-image" data-component="printer">
-                                <img src="printer2.png" alt="Printer - Side View" class="component-image" data-component="printer">
+                        <div class="component-info" id="printer-info">
+                            <h2 class="component-title">2. Printer</h2>
+                            <p class="component-description">
+                                This state-of-the-art 3D printer enables on-demand manufacturing of critical components
+                                directly in space. Utilizing advanced additive manufacturing techniques, it can produce
+                                replacement parts and specialized tools with precision-engineered materials.
+                            </p>
+                            <div class="component-specs">
+                                <h3>Technical Specifications:</h3>
+                                <ul>
+                                    <li>Print volume: 200mm × 200mm × 200mm</li>
+                                    <li>Resolution: 0.1mm layer height</li>
+                                    <li>Materials: Thermoplastic polymers</li>
+                                    <li>Power consumption: 200W</li>
+                                    <li>Temperature range: 180-280°C</li>
+                                </ul>
                             </div>
                         </div>
 
-                        <!-- Component 3: Centrifuge -->
-                        <div class="component-section" data-component="centrifuge">
-                            <div class="component-images">
-                                <img src="centrifuge1.png" alt="Centrifuge - Main View" class="component-image" data-component="centrifuge">
-                                <img src="centrifuge2.png" alt="Centrifuge - Side View" class="component-image" data-component="centrifuge">
+                        <div class="component-info" id="centrifuge-info">
+                            <h2 class="component-title">3. Centrifuge</h2>
+                            <p class="component-description">
+                                This high-speed centrifuge provides artificial gravity simulation and enables
+                                material separation processes in microgravity environments. Essential for
+                                scientific research and material processing applications in space missions.
+                            </p>
+                            <div class="component-specs">
+                                <h3>Technical Specifications:</h3>
+                                <ul>
+                                    <li>Max RPM: 10,000</li>
+                                    <li>Capacity: 6 sample tubes</li>
+                                    <li>Force: Up to 10,000g</li>
+                                    <li>Control: Variable speed</li>
+                                    <li>Safety: Automatic imbalance detection</li>
+                                </ul>
                             </div>
                         </div>
 
-                        <!-- Component 4: Slag/Waste Containment -->
-                        <div class="component-section" data-component="slag-waste">
-                            <div class="component-images">
-                                <img src="slugwaste1.png" alt="Slag/Waste Containment - Main View" class="component-image" data-component="slag-waste">
-                                <img src="slugwaste2.png" alt="Slag/Waste Containment - Side View" class="component-image" data-component="slag-waste">
+                        <div class="component-info" id="slag-waste-info">
+                            <h2 class="component-title">4. Slag/Waste Containment</h2>
+                            <p class="component-description">
+                                This secure containment system safely stores and manages waste materials and
+                                manufacturing byproducts in space. Designed with multiple safety layers and
+                                environmental protection features for reliable operation in harsh space conditions.
+                            </p>
+                            <div class="component-specs">
+                                <h3>Technical Specifications:</h3>
+                                <ul>
+                                    <li>Volume: 5 liters</li>
+                                    <li>Material: Stainless steel</li>
+                                    <li>Temperature range: -50°C to +200°C</li>
+                                    <li>Pressure rating: 15 bar</li>
+                                    <li>Seal: Hermetic sealing system</li>
+                                </ul>
                             </div>
                         </div>
 
-                        <!-- Component 5: Decontamination -->
-                        <div class="component-section" data-component="decontamination">
-                            <div class="component-images">
-                                <img src="heatcont1.png" alt="Heat Decontaminator - Main View" class="component-image" data-component="decontamination">
-                                <img src="heatcont2.png" alt="Heat Decontaminator - Side View" class="component-image" data-component="decontamination">
-                                <img src="heatcont3.png" alt="Heat Decontaminator - Internal View" class="component-image" data-component="decontamination">
+                        <div class="component-info" id="decontamination-info">
+                            <h2 class="component-title">5. Decontamination</h2>
+                            <p class="component-description">
+                                This advanced decontamination system ensures sterile conditions aboard the satellite
+                                through multi-stage cleaning and UV sterilization processes. Critical for maintaining
+                                equipment integrity and crew safety in closed space environments.
+                            </p>
+                            <div class="component-specs">
+                                <h3>Technical Specifications:</h3>
+                                <ul>
+                                    <li>Method: UV sterilization + chemical cleaning</li>
+                                    <li>Coverage: 360° surface treatment</li>
+                                    <li>Cycle time: 30 minutes</li>
+                                    <li>Power: 50W UV lamp</li>
+                                    <li>Safety: Automatic shutdown systems</li>
+                                </ul>
                             </div>
                         </div>
 
-                        <!-- Component 6: Satellite Deposition -->
-                        <div class="component-section" data-component="satellite-deposition">
-                            <div class="component-images">
-                                <img src="debrisd1.png" alt="Satellite Deposition - Main View" class="component-image" data-component="satellite-deposition">
-                                <img src="debrisd2.png" alt="Satellite Deposition - Side View" class="component-image" data-component="satellite-deposition">
+                        <div class="component-info" id="satellite-deposition-info">
+                            <h2 class="component-title">6. Satellite Deposition</h2>
+                            <p class="component-description">
+                                This precision coating system applies protective layers and specialized materials
+                                to satellite components using advanced vapor deposition technology. Essential for
+                                enhancing durability and performance in the harsh conditions of space.
+                            </p>
+                            <div class="component-specs">
+                                <h3>Technical Specifications:</h3>
+                                <ul>
+                                    <li>Deposition method: Physical vapor deposition</li>
+                                    <li>Thickness range: 0.1-10 microns</li>
+                                    <li>Materials: Metals, ceramics, polymers</li>
+                                    <li>Vacuum level: 10^-6 Torr</li>
+                                    <li>Substrate heating: Up to 400°C</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Component Description Area -->
-            <div class="component-description-area" id="component-description-area">
-                <div class="description-container">
-                    <div class="component-info" id="spool-info">
-                        <h2 class="component-title">1. Spool</h2>
-                        <p class="component-description">
-                            This precision-engineered spool system enables controlled deployment and retrieval of materials
-                            in space environments. It features advanced tension control and automated winding mechanisms
-                            for reliable operation in zero gravity conditions.
-                        </p>
-                        <div class="component-specs">
-                            <h3>Technical Specifications:</h3>
-                            <ul>
-                                <li>Diameter: 150mm</li>
-                                <li>Capacity: 500m of material</li>
-                                <li>Motor: Stepper motor drive</li>
-                                <li>Material: Carbon fiber composite</li>
-                                <li>Control: Precision positioning system</li>
-                            </ul>
+            <!-- ORCA Technologies View -->
+            <div id="technologies-view" class="view-container">
+                <!-- Component Selection Dropdown -->
+                <div class="component-selector">
+                    <label for="component-select" class="selector-label">Select ORCA Technology:</label>
+                    <select id="component-select" class="component-dropdown">
+                        <option value="">Choose a technology...</option>
+                        <option value="ebchm" selected>1. Electron-Beam Cold-Hearth Melting (EBCHM)</option>
+                        <option value="ebam">2. Electron-Beam Additive Manufacturing (EBAM)</option>
+                        <option value="gecko-grippers">3. Gecko-Inspired Adhesive Grippers</option>
+                    </select>
+                </div>
+
+                <!-- Single Component Display -->
+                <div class="rolling-gallery-container">
+                    <div class="rolling-gallery-track">
+                        <div class="components-grid">
+                            <!-- Technology 1: EBCHM -->
+                            <div class="component-section" data-component="ebchm">
+                                <div class="component-images">
+                                    <img src="spool1.png" alt="EBCHM Electron Gun" class="component-image" data-component="ebchm">
+                                    <img src="spool2.png" alt="EBCHM Cold Hearth Process" class="component-image" data-component="ebchm">
+                                </div>
+                            </div>
+
+                            <!-- Technology 2: EBAM -->
+                            <div class="component-section" data-component="ebam">
+                                <div class="component-images">
+                                    <img src="printer1.png" alt="EBAM Print Head" class="component-image" data-component="ebam">
+                                    <img src="printer2.png" alt="EBAM Wire Feed System" class="component-image" data-component="ebam">
+                                </div>
+                            </div>
+
+                            <!-- Technology 3: Gecko Grippers -->
+                            <div class="component-section" data-component="gecko-grippers">
+                                <div class="component-images">
+                                    <img src="centrifuge1.png" alt="Gecko Gripper Microstructure" class="component-image" data-component="gecko-grippers">
+                                    <img src="centrifuge2.png" alt="Gecko Gripper Deployment" class="component-image" data-component="gecko-grippers">
+                                </div>
+                            </div>
                         </div>
                     </div>
+                </div>
 
-                    <div class="component-info" id="printer-info">
-                        <h2 class="component-title">2. Printer</h2>
-                        <p class="component-description">
-                            This state-of-the-art 3D printer enables on-demand manufacturing of critical components
-                            directly in space. Utilizing advanced additive manufacturing techniques, it can produce
-                            replacement parts and specialized tools with precision-engineered materials.
-                        </p>
-                        <div class="component-specs">
-                            <h3>Technical Specifications:</h3>
-                            <ul>
-                                <li>Print volume: 200mm × 200mm × 200mm</li>
-                                <li>Resolution: 0.1mm layer height</li>
-                                <li>Materials: Thermoplastic polymers</li>
-                                <li>Power consumption: 200W</li>
-                                <li>Temperature range: 180-280°C</li>
-                            </ul>
+                <!-- Technology Description Area -->
+                <div class="component-description-area" id="technologies-description-area">
+                    <div class="description-container">
+                        <div class="component-info" id="ebchm-info">
+                            <h2 class="component-title">1. Electron-Beam Cold-Hearth Melting (EBCHM)</h2>
+                            <p class="component-description">
+                                Electron-beam cold-hearth melting is used to refine and purify mixed-metal debris collected from orbit into uniform, high-quality alloys suitable for manufacturing.
+                            </p>
+                            <div class="component-specs">
+                                <h3>How It Works:</h3>
+                                <ul>
+                                    <li><strong>Electron Beam Generation:</strong> High-voltage electron gun (20–60 kilovolts) emits focused electrons in vacuum</li>
+                                    <li><strong>Cold-Hearth Design:</strong> Water-cooled copper hearth prevents contamination</li>
+                                    <li><strong>Refinement Process:</strong> Molten pool separates contaminants - dense inclusions sink, light impurities become slag</li>
+                                    <li><strong>Space Optimization:</strong> Natural vacuum eliminates need for pumps, prevents oxidation</li>
+                                </ul>
+                                <h3>Space Applications:</h3>
+                                <ul>
+                                    <li>Refines scrap metal into aerospace-grade alloys</li>
+                                    <li>Electromagnetic fields position and stir melt in microgravity</li>
+                                    <li>Produces materials for in-orbit manufacturing</li>
+                                </ul>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="component-info" id="centrifuge-info">
-                        <h2 class="component-title">3. Centrifuge</h2>
-                        <p class="component-description">
-                            This high-speed centrifuge provides artificial gravity simulation and enables
-                            material separation processes in microgravity environments. Essential for
-                            scientific research and material processing applications in space missions.
-                        </p>
-                        <div class="component-specs">
-                            <h3>Technical Specifications:</h3>
-                            <ul>
-                                <li>Max RPM: 10,000</li>
-                                <li>Capacity: 6 sample tubes</li>
-                                <li>Force: Up to 10,000g</li>
-                                <li>Control: Variable speed</li>
-                                <li>Safety: Automatic imbalance detection</li>
-                            </ul>
+                        <div class="component-info" id="ebam-info">
+                            <h2 class="component-title">2. Electron-Beam Additive Manufacturing (EBAM)</h2>
+                            <p class="component-description">
+                                Electron-beam additive manufacturing enables in-space 3D printing of structural metal components using wire feedstock produced from refined debris.
+                            </p>
+                            <div class="component-specs">
+                                <h3>How It Works:</h3>
+                                <ul>
+                                    <li><strong>Feedstock Delivery:</strong> Wire feed (1–2 mm diameter) supplied into print head</li>
+                                    <li><strong>Melting and Deposition:</strong> Electron beam melts wire tip and deposits molten metal</li>
+                                    <li><strong>Layer Formation:</strong> Robotic gantry builds part layer by layer with real-time sensors</li>
+                                    <li><strong>Result:</strong> Near-net-shape, dense components requiring minimal post-processing</li>
+                                </ul>
+                                <h3>Space Applications:</h3>
+                                <ul>
+                                    <li>Eliminates need to launch bulky structures from Earth</li>
+                                    <li>Fabricates trusses, panels, satellite frames in orbit</li>
+                                    <li>Uses reclaimed materials for sustainable manufacturing</li>
+                                    <li>Based on NASA's Electron Beam Freeform Fabrication (EBF³)</li>
+                                </ul>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="component-info" id="slag-waste-info">
-                        <h2 class="component-title">4. Slag/Waste Containment</h2>
-                        <p class="component-description">
-                            This secure containment system safely stores and manages waste materials and
-                            manufacturing byproducts in space. Designed with multiple safety layers and
-                            environmental protection features for reliable operation in harsh space conditions.
-                        </p>
-                        <div class="component-specs">
-                            <h3>Technical Specifications:</h3>
-                            <ul>
-                                <li>Volume: 5 liters</li>
-                                <li>Material: Stainless steel</li>
-                                <li>Temperature range: -50°C to +200°C</li>
-                                <li>Pressure rating: 15 bar</li>
-                                <li>Seal: Hermetic sealing system</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="component-info" id="decontamination-info">
-                        <h2 class="component-title">5. Decontamination</h2>
-                        <p class="component-description">
-                            This advanced decontamination system ensures sterile conditions aboard the satellite
-                            through multi-stage cleaning and UV sterilization processes. Critical for maintaining
-                            equipment integrity and crew safety in closed space environments.
-                        </p>
-                        <div class="component-specs">
-                            <h3>Technical Specifications:</h3>
-                            <ul>
-                                <li>Method: UV sterilization + chemical cleaning</li>
-                                <li>Coverage: 360° surface treatment</li>
-                                <li>Cycle time: 30 minutes</li>
-                                <li>Power: 50W UV lamp</li>
-                                <li>Safety: Automatic shutdown systems</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="component-info" id="satellite-deposition-info">
-                        <h2 class="component-title">6. Satellite Deposition</h2>
-                        <p class="component-description">
-                            This precision coating system applies protective layers and specialized materials
-                            to satellite components using advanced vapor deposition technology. Essential for
-                            enhancing durability and performance in the harsh conditions of space.
-                        </p>
-                        <div class="component-specs">
-                            <h3>Technical Specifications:</h3>
-                            <ul>
-                                <li>Deposition method: Physical vapor deposition</li>
-                                <li>Thickness range: 0.1-10 microns</li>
-                                <li>Materials: Metals, ceramics, polymers</li>
-                                <li>Vacuum level: 10^-6 Torr</li>
-                                <li>Substrate heating: Up to 400°C</li>
-                            </ul>
+                        <div class="component-info" id="gecko-grippers-info">
+                            <h2 class="component-title">3. Gecko-Inspired Adhesive Grippers</h2>
+                            <p class="component-description">
+                                Gecko-inspired adhesive grippers allow ORCA's micro-debris drones to capture small or irregularly shaped debris without using suction, magnets, or mechanical force.
+                            </p>
+                            <div class="component-specs">
+                                <h3>How It Works:</h3>
+                                <ul>
+                                    <li><strong>Microstructure Design:</strong> Synthetic microfibers mimic gecko setae</li>
+                                    <li><strong>Adhesion Mechanism:</strong> Van der Waals forces create strong molecular bonds</li>
+                                    <li><strong>Control and Release:</strong> Directional adhesion resists shear but releases when peeled</li>
+                                    <li><strong>Gentle Contact:</strong> Secure attachment without significant pressure</li>
+                                </ul>
+                                <h3>Space Applications:</h3>
+                                <ul>
+                                    <li>Captures varied materials and geometries of orbital debris</li>
+                                    <li>Clean, reusable, non-destructive attachment method</li>
+                                    <li>Tested on International Space Station by NASA JPL and Stanford</li>
+                                    <li>Essential for microgravity debris collection</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -206,94 +319,196 @@
         </main>
 
         <footer class="footer">
-            <p>&copy; 2024 Satellite Prototype Project</p>
+            <p>&copy; 2024 ORCA - Orbital Recycling & Capture Apparatus</p>
         </footer>
     </div>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const dropdown = document.getElementById('component-select');
-            const descriptionArea = document.getElementById('component-description-area');
-            const carouselTrack = document.querySelector('.rolling-gallery-track');
-            const componentSections = document.querySelectorAll('.component-section');
+            // Navigation tabs
+            const navTabs = document.querySelectorAll('.nav-tab');
+            const viewContainers = document.querySelectorAll('.view-container');
+
+            // Components view elements
+            const componentsView = document.getElementById('components-view');
+            const componentsDescriptionArea = document.getElementById('components-description-area');
+
+            // Technologies view elements
+            const technologiesView = document.getElementById('technologies-view');
+            const technologiesDropdown = document.getElementById('component-select');
+            const technologiesDescriptionArea = document.getElementById('technologies-description-area');
+
             let currentActiveComponent = null;
 
-            console.log('Found', componentSections.length, 'component sections');
+            // Initialize - show components view by default and set up event handlers
+            setupComponentsView();
 
-            // Set up dropdown change handler
-            dropdown.addEventListener('change', function() {
+            // Handle navigation tab clicks
+            navTabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    const viewToShow = this.getAttribute('data-view');
+
+                    // Update active tab
+                    navTabs.forEach(t => t.classList.remove('active'));
+                    this.classList.add('active');
+
+                    // Show/hide views
+                    viewContainers.forEach(container => {
+                        container.classList.remove('active');
+                    });
+
+                    if (viewToShow === 'components') {
+                        componentsView.classList.add('active');
+                        // Hide any open descriptions in components view
+                        hideComponentsDescription();
+                        // Set up component image click handlers for components view
+                        setupComponentsView();
+                        // Show first component section by default
+                        showComponentsComponentSection('spool');
+                    } else if (viewToShow === 'technologies') {
+                        technologiesView.classList.add('active');
+                        // Hide any open descriptions in technologies view
+                        hideTechnologiesDescription();
+                        // Show first technology section by default
+                        showTechnologiesComponentSection('ebchm');
+                    }
+                });
+            });
+
+            // Set up component image click handlers for components view
+            function setupComponentsView() {
+                const componentImages = componentsView.querySelectorAll('.component-image');
+                console.log('Setting up', componentImages.length, 'component image handlers');
+
+                componentImages.forEach(image => {
+                    image.addEventListener('click', function() {
+                        console.log('Component image clicked');
+                        const component = this.getAttribute('data-component');
+                        console.log('Component:', component);
+                        const infoSection = componentsDescriptionArea.querySelector('#' + component + '-info');
+                        console.log('Info section found:', infoSection);
+
+                        // If clicking the same component, hide the description
+                        if (currentActiveComponent === component) {
+                            console.log('Hiding components description');
+                            hideComponentsDescription();
+                            return;
+                        }
+
+                        // Hide all other info sections first
+                        componentsDescriptionArea.querySelectorAll('.component-info').forEach(info => {
+                            info.classList.remove('active');
+                        });
+
+                        // Show the clicked component's info
+                        infoSection.classList.add('active');
+                        componentsDescriptionArea.classList.add('active');
+                        currentActiveComponent = component;
+                    });
+                });
+            }
+
+            // Set up technologies dropdown change handler
+            technologiesDropdown.addEventListener('change', function() {
                 const selectedComponent = this.value;
-                console.log('Dropdown changed to:', selectedComponent);
+                console.log('Technologies dropdown changed to:', selectedComponent);
 
                 // If selecting the same component or empty value, hide description
                 if (!selectedComponent || currentActiveComponent === selectedComponent) {
-                    console.log('Hiding description');
-                    hideDescription();
+                    console.log('Hiding technologies description');
+                    hideTechnologiesDescription();
                     return;
                 }
 
                 // Show the selected component section
-                showComponentSection(selectedComponent);
+                showTechnologiesComponentSection(selectedComponent);
 
                 // Show the component's description
                 const infoSection = document.getElementById(selectedComponent + '-info');
-                console.log('Info section found:', infoSection);
+                console.log('Technologies info section found:', infoSection);
 
                 // Hide all other info sections first
-                document.querySelectorAll('.component-info').forEach(info => {
+                technologiesDescriptionArea.querySelectorAll('.component-info').forEach(info => {
                     info.classList.remove('active');
                 });
 
                 // Show the selected component's info
                 infoSection.classList.add('active');
-                descriptionArea.classList.add('active');
+                technologiesDescriptionArea.classList.add('active');
                 currentActiveComponent = selectedComponent;
             });
 
-            // Function to show a specific component section
-            function showComponentSection(component) {
-                console.log('Showing component section:', component);
+            // Function to show a specific component section in components view
+            function showComponentsComponentSection(component) {
+                console.log('Showing components section:', component);
                 // Hide all component sections first
-                componentSections.forEach(section => {
+                componentsView.querySelectorAll('.component-section').forEach(section => {
                     section.style.display = 'none';
                 });
                 // Show the selected component section
-                const targetSection = document.querySelector(`[data-component="${component}"]`);
+                const targetSection = componentsView.querySelector(`[data-component="${component}"]`);
                 if (targetSection) {
                     targetSection.style.display = 'block';
-                    console.log('Component section shown');
+                    console.log('Components section shown');
                 }
             }
 
-            // Function to hide description and resume carousel
-            function hideDescription() {
-                console.log('hideDescription called');
-                console.log('Description area before:', descriptionArea.classList.toString());
-
-                // Hide all component sections
-                componentSections.forEach(section => {
+            // Function to show a specific component section in technologies view
+            function showTechnologiesComponentSection(component) {
+                console.log('Showing technologies section:', component);
+                // Hide all component sections first
+                technologiesView.querySelectorAll('.component-section').forEach(section => {
                     section.style.display = 'none';
                 });
+                // Show the selected component section
+                const targetSection = technologiesView.querySelector(`[data-component="${component}"]`);
+                if (targetSection) {
+                    targetSection.style.display = 'block';
+                    console.log('Technologies section shown');
+                }
+            }
 
-                // Hide all info sections and description area
-                document.querySelectorAll('.component-info').forEach(info => {
+            // Function to hide components description
+            function hideComponentsDescription() {
+                console.log('Hiding components description');
+                // Hide all info sections and description area in components view
+                componentsDescriptionArea.querySelectorAll('.component-info').forEach(info => {
                     info.classList.remove('active');
                 });
-                descriptionArea.classList.remove('active');
+                componentsDescriptionArea.classList.remove('active');
                 currentActiveComponent = null;
-                console.log('Description area after:', descriptionArea.classList.toString());
+            }
+
+            // Function to hide technologies description
+            function hideTechnologiesDescription() {
+                console.log('Hiding technologies description');
+                // Hide all info sections and description area in technologies view
+                technologiesDescriptionArea.querySelectorAll('.component-info').forEach(info => {
+                    info.classList.remove('active');
+                });
+                technologiesDescriptionArea.classList.remove('active');
+                currentActiveComponent = null;
             }
 
             // Carousel animation functions removed since we're not using animation
 
-            // Hide description when clicking outside the dropdown or description area
+            // Hide description when clicking outside
             document.addEventListener('click', function(event) {
-                if (!event.target.closest('.component-dropdown') && !event.target.closest('.component-description-area')) {
-                    hideDescription();
+                // Check if clicking outside components view elements
+                if (componentsView.classList.contains('active')) {
+                    if (!event.target.closest('.component-image') &&
+                        !event.target.closest('#components-description-area')) {
+                        hideComponentsDescription();
+                    }
+                }
+                // Check if clicking outside technologies view elements
+                else if (technologiesView.classList.contains('active')) {
+                    if (!event.target.closest('.component-dropdown') &&
+                        !event.target.closest('#technologies-description-area')) {
+                        hideTechnologiesDescription();
+                    }
                 }
             });
-
-            // Carousel hover behavior removed since we're not using animation
         });
     </script>
 </body>
