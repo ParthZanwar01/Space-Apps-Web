@@ -203,23 +203,32 @@
             const carouselTrack = document.querySelector('.rolling-gallery-track');
             let currentActiveComponent = null;
 
-            images.forEach(image => {
+            console.log('Found', images.length, 'component images');
+            images.forEach((image, index) => {
+                console.log('Setting up click handler for image', index);
                 image.addEventListener('click', function() {
+                    console.log('Image clicked!', index);
+                    alert('Image clicked! Check console for details.');
                     const component = this.getAttribute('data-component');
+                    console.log('Component:', component);
                     const infoSection = document.getElementById(component + '-info');
+                    console.log('Info section found:', infoSection);
 
                     // If clicking the same component, hide the description and resume carousel
                     if (currentActiveComponent === component) {
+                        console.log('Hiding description');
                         hideDescription();
                         return;
                     }
 
                     // Hide all other info sections first
+                    console.log('Hiding all other info sections');
                     document.querySelectorAll('.component-info').forEach(info => {
                         info.classList.remove('active');
                     });
 
                     // Show the clicked component's info
+                    console.log('Showing clicked component info');
                     infoSection.classList.add('active');
                     descriptionArea.classList.add('active');
                     currentActiveComponent = component;
@@ -231,11 +240,14 @@
 
             // Function to hide description and resume carousel
             function hideDescription() {
+                console.log('hideDescription called');
+                console.log('Description area before:', descriptionArea.classList.toString());
                 document.querySelectorAll('.component-info').forEach(info => {
                     info.classList.remove('active');
                 });
                 descriptionArea.classList.remove('active');
                 currentActiveComponent = null;
+                console.log('Description area after:', descriptionArea.classList.toString());
 
                 // Resume the carousel
                 resumeCarousel();
