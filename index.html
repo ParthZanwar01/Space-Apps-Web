@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Satellite Prototype - Interactive Display</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">Satellite Prototype</h1>
+            <p class="subtitle">Interactive Component Explorer</p>
+        </header>
+
+        <main class="main-content">
+            <!-- Satellite Image at Top -->
+            <div class="satellite-display">
+                <img src="satellite-image.png" alt="Satellite Prototype" class="main-satellite-image">
+            </div>
+
+            <!-- Component Cards Below -->
+            <div class="components-grid">
+                <div class="component-card" data-component="spool">
+                    <div class="component-number">1</div>
+                    <h3>Spool</h3>
+                    <p>A rotating mechanism that manages and dispenses materials within the satellite system.</p>
+                    <button class="details-btn" onclick="showComponentDetails('spool')">Learn More</button>
+                </div>
+
+                <div class="component-card" data-component="printer">
+                    <div class="component-number">2</div>
+                    <h3>Printer</h3>
+                    <p>An advanced manufacturing system capable of 3D printing components in space.</p>
+                    <button class="details-btn" onclick="showComponentDetails('printer')">Learn More</button>
+                </div>
+
+                <div class="component-card" data-component="centrifuge">
+                    <div class="component-number">3</div>
+                    <h3>Centrifuge</h3>
+                    <p>A high-speed rotating device for separating materials and creating artificial gravity.</p>
+                    <button class="details-btn" onclick="showComponentDetails('centrifuge')">Learn More</button>
+                </div>
+
+                <div class="component-card" data-component="slag-waste">
+                    <div class="component-number">4</div>
+                    <h3>Slag/Waste Containment</h3>
+                    <p>A specialized containment system for safely storing waste materials and byproducts.</p>
+                    <button class="details-btn" onclick="showComponentDetails('slag-waste')">Learn More</button>
+                </div>
+
+                <div class="component-card" data-component="decontamination">
+                    <div class="component-number">5</div>
+                    <h3>Decontamination</h3>
+                    <p>A cleaning and sterilization system that removes contaminants from the satellite environment.</p>
+                    <button class="details-btn" onclick="showComponentDetails('decontamination')">Learn More</button>
+                </div>
+
+                <div class="component-card" data-component="satellite-deposition">
+                    <div class="component-number">6</div>
+                    <h3>Satellite Deposition</h3>
+                    <p>A precision deposition system that applies coatings and materials to satellite components.</p>
+                    <button class="details-btn" onclick="showComponentDetails('satellite-deposition')">Learn More</button>
+                </div>
+            </div>
+
+            <!-- Details Popup -->
+            <div id="details-popup" class="details-popup">
+                <div class="popup-content">
+                    <span class="close-btn" onclick="closeDetails()">&times;</span>
+                    <div id="popup-details"></div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2024 Satellite Prototype Project</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

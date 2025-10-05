@@ -1,0 +1,647 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
+    color: #ffffff;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 40px 0;
+}
+
+.title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    background: linear-gradient(45deg, #00d4ff, #0099cc, #0066aa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 10px;
+    text-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #b8c5d6;
+    font-weight: 300;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.satellite-display {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.main-satellite-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    max-height: 500px;
+    object-fit: contain;
+}
+
+.components-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.component-card {
+    background: linear-gradient(145deg, #1a1a2e 0%, #16213e 100%);
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+    border: 2px solid #00d4ff;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.component-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 212, 255, 0.2);
+    border-color: #ffdd44;
+}
+
+.component-number {
+    width: 50px;
+    height: 50px;
+    background: #ffdd44;
+    color: #000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0 auto 15px;
+}
+
+.component-card h3 {
+    color: #ffdd44;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.component-card p {
+    color: #b8c5d6;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+.details-btn {
+    background: linear-gradient(45deg, #00d4ff, #0099cc);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.details-btn:hover {
+    background: linear-gradient(45deg, #ffdd44, #ccaa00);
+    transform: scale(1.05);
+}
+
+.details-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+.popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(145deg, #1a1a2e 0%, #16213e 100%);
+    padding: 40px;
+    border-radius: 20px;
+    border: 3px solid #ffdd44;
+    max-width: 600px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 30px;
+    color: #ffdd44;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.close-btn:hover {
+    color: #ff6666;
+}
+
+#popup-details h3 {
+    color: #ffdd44;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#popup-details .function {
+    background: rgba(0, 212, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    border-left: 4px solid #00d4ff;
+}
+
+#popup-details .function h4 {
+    color: #00d4ff;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+#popup-details .specs {
+    background: rgba(255, 221, 68, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 4px solid #ffdd44;
+}
+
+#popup-details .specs h4 {
+    color: #ffdd44;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+#popup-details .specs ul {
+    list-style: none;
+    padding: 0;
+}
+
+#popup-details .specs li {
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    color: #b8c5d6;
+}
+
+#popup-details .specs li:last-child {
+    border-bottom: none;
+}
+
+/* Removed the overlay to show the actual satellite image clearly */
+
+.satellite-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 15% 15%, rgba(255, 136, 0, 0.1) 0%, transparent 40%),
+        radial-gradient(circle at 85% 85%, rgba(255, 68, 68, 0.1) 0%, transparent 40%),
+        radial-gradient(circle at 50% 30%, rgba(0, 255, 136, 0.05) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.hotspot {
+    position: absolute;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    z-index: 10;
+}
+
+.hotspot:hover {
+    transform: scale(1.2);
+}
+
+.hotspot-pulse {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border: 3px solid #ff4444;
+    border-radius: 50%;
+    background: rgba(255, 68, 68, 0.2);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.3);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
+
+.hotspot.active .hotspot-pulse {
+    animation: none;
+    border-color: #ffdd44;
+    background: rgba(255, 221, 68, 0.4);
+    box-shadow: 0 0 20px rgba(255, 221, 68, 0.8);
+}
+
+.hotspot.active .hotspot-number {
+    background: #ffdd44;
+    color: #000;
+}
+
+/* Removed icon styles since we're using tiny buttons now */
+
+/* Leader Lines with L-shaped paths */
+.leader-line {
+    position: absolute;
+    background: #ffdd44;
+    z-index: 10;
+}
+
+.leader-line::before,
+.leader-line::after {
+    content: '';
+    position: absolute;
+    background: #ffdd44;
+}
+
+/* Individual leader lines for each hotspot */
+.leader-line-1 {
+    width: 130px;
+    height: 2px;
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%);
+}
+
+.leader-line-1::after {
+    width: 2px;
+    height: 85px;
+    right: 0;
+    top: 100%;
+}
+
+.leader-line-2 {
+    width: 145px;
+    height: 2px;
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%);
+}
+
+.leader-line-2::after {
+    width: 2px;
+    height: 65px;
+    right: 0;
+    top: 100%;
+}
+
+.leader-line-3 {
+    width: 135px;
+    height: 2px;
+    top: 50%;
+    right: 100%;
+    transform: translateY(-50%);
+}
+
+.leader-line-3::after {
+    width: 2px;
+    height: 65px;
+    left: 0;
+    top: 100%;
+}
+
+.leader-line-4 {
+    width: 145px;
+    height: 2px;
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%);
+}
+
+.leader-line-4::after {
+    width: 2px;
+    height: 65px;
+    right: 0;
+    top: 100%;
+}
+
+.leader-line-5 {
+    width: 135px;
+    height: 2px;
+    top: 50%;
+    right: 100%;
+    transform: translateY(-50%);
+}
+
+.leader-line-5::after {
+    width: 2px;
+    height: 85px;
+    left: 0;
+    top: 100%;
+}
+
+.leader-line-6 {
+    width: 145px;
+    height: 2px;
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%);
+}
+
+.leader-line-6::after {
+    width: 2px;
+    height: 85px;
+    right: 0;
+    top: 100%;
+}
+
+/* External Component Labels - Better positioned */
+.component-label {
+    position: absolute;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 6px 10px;
+    border-radius: 4px;
+    border: 1px solid #ffdd44;
+    white-space: nowrap;
+    z-index: 20;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Labels positioned at end of extended leader lines */
+.label-1 {
+    top: 100%;
+    left: 100%;
+    margin-left: 150px;
+    margin-top: 100px;
+}
+
+.label-2 {
+    top: 100%;
+    left: 100%;
+    margin-left: 160px;
+    margin-top: 80px;
+}
+
+.label-3 {
+    top: 100%;
+    right: 100%;
+    margin-right: 150px;
+    margin-top: 80px;
+}
+
+.label-4 {
+    top: 100%;
+    left: 100%;
+    margin-left: 160px;
+    margin-top: 80px;
+}
+
+.label-5 {
+    top: 100%;
+    right: 100%;
+    margin-right: 150px;
+    margin-top: 100px;
+}
+
+.label-6 {
+    top: 100%;
+    left: 100%;
+    margin-left: 160px;
+    margin-top: 100px;
+}
+
+.hotspot-number {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: #ff4444;
+    color: white;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: bold;
+    border: 2px solid white;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    z-index: 20;
+    transition: all 0.3s ease;
+}
+
+/* Hotspot Positioning - EXACTLY matching user's reference image */
+.hotspot-1 {
+    /* Hotspot 1 - EXACT position from user's image */
+    top: 15%;
+    right: 35%;
+}
+
+.hotspot-2 {
+    /* Hotspot 2 - EXACT position from user's image */
+    top: 38%;
+    right: 12%;
+    transform: translateY(-50%);
+}
+
+.hotspot-3 {
+    /* Hotspot 3 - EXACT position from user's image */
+    top: 52%;
+    left: 8%;
+}
+
+.hotspot-4 {
+    /* Hotspot 4 - EXACT position from user's image */
+    bottom: 22%;
+    right: 32%;
+}
+
+.hotspot-5 {
+    /* Hotspot 5 - EXACT position from user's image */
+    bottom: 28%;
+    left: 12%;
+}
+
+.hotspot-6 {
+    /* Hotspot 6 - EXACT position from user's image */
+    bottom: 15%;
+    right: 28%;
+}
+
+/* Info panel styles removed since panel was removed */
+
+.footer {
+    text-align: center;
+    padding: 30px 0;
+    color: #6b7280;
+    border-top: 1px solid rgba(0, 212, 255, 0.1);
+    margin-top: 40px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .main-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .satellite-body {
+        width: 700px;
+        height: 800px;
+    }
+    
+    .title {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+    
+    .title {
+        font-size: 2rem;
+    }
+    
+    .subtitle {
+        font-size: 1rem;
+    }
+    
+    .satellite-body {
+        width: 600px;
+        height: 700px;
+    }
+    
+    .component {
+        min-width: 60px;
+        min-height: 60px;
+        padding: 12px;
+    }
+    
+    .component i {
+        font-size: 1.3rem;
+    }
+    
+    .component-label {
+        font-size: 0.7rem;
+    }
+    
+    .component-1 {
+        width: 100px;
+        height: 100px;
+        bottom: 120px;
+        left: 100px;
+    }
+    
+    .component-2 {
+        width: 120px;
+        height: 75px;
+        bottom: 120px;
+        right: 100px;
+    }
+    
+    .component-3 {
+        width: 140px;
+        height: 85px;
+    }
+    
+    .component-4 {
+        width: 75px;
+        height: 150px;
+        right: 120px;
+    }
+    
+    .component-5 {
+        width: 100px;
+        height: 65px;
+        top: 130px;
+        left: 100px;
+    }
+    
+    .component-6 {
+        width: 75px;
+        height: 75px;
+        top: 130px;
+        right: 100px;
+    }
+    
+    .info-panel {
+        padding: 20px;
+    }
+}
+
+/* Animated background stars */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(2px 2px at 20px 30px, #eee, transparent),
+        radial-gradient(2px 2px at 40px 70px, rgba(255,255,255,0.8), transparent),
+        radial-gradient(1px 1px at 90px 40px, #fff, transparent),
+        radial-gradient(1px 1px at 130px 80px, rgba(255,255,255,0.6), transparent),
+        radial-gradient(2px 2px at 160px 30px, #ddd, transparent);
+    background-repeat: repeat;
+    background-size: 200px 100px;
+    animation: sparkle 20s linear infinite;
+    z-index: -1;
+}
+
+@keyframes sparkle {
+    from { transform: translateX(0); }
+    to { transform: translateX(200px); }
+}
