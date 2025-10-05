@@ -15,58 +15,72 @@
         </header>
 
         <main class="main-content">
-            <!-- Rolling Carousel with Images Only -->
+            <!-- Component Selection Dropdown -->
+            <div class="component-selector">
+                <label for="component-select" class="selector-label">Select Component:</label>
+                <select id="component-select" class="component-dropdown">
+                    <option value="">Choose a component...</option>
+                    <option value="spool" selected>1. Spool</option>
+                    <option value="printer">2. Printer</option>
+                    <option value="centrifuge">3. Centrifuge</option>
+                    <option value="slag-waste">4. Slag/Waste Containment</option>
+                    <option value="decontamination">5. Decontamination</option>
+                    <option value="satellite-deposition">6. Satellite Deposition</option>
+                </select>
+            </div>
+
+            <!-- Single Component Display -->
             <div class="rolling-gallery-container">
                 <div class="rolling-gallery-track">
                     <div class="components-grid">
-                <!-- Component 1: Spool -->
-                <div class="component-section">
-                    <div class="component-images">
-                        <img src="spool1.png" alt="Spool - Frontal View" class="component-image" data-component="spool">
-                        <img src="spool2.png" alt="Spool - Back View" class="component-image" data-component="spool">
-                    </div>
-                </div>
+                        <!-- Component 1: Spool -->
+                        <div class="component-section" data-component="spool">
+                            <div class="component-images">
+                                <img src="spool1.png" alt="Spool - Frontal View" class="component-image" data-component="spool">
+                                <img src="spool2.png" alt="Spool - Back View" class="component-image" data-component="spool">
+                            </div>
+                        </div>
 
-                <!-- Component 2: Printer -->
-                <div class="component-section">
-                    <div class="component-images">
-                        <img src="printer1.png" alt="Printer - Main View" class="component-image" data-component="printer">
-                        <img src="printer2.png" alt="Printer - Side View" class="component-image" data-component="printer">
-                    </div>
-                </div>
+                        <!-- Component 2: Printer -->
+                        <div class="component-section" data-component="printer">
+                            <div class="component-images">
+                                <img src="printer1.png" alt="Printer - Main View" class="component-image" data-component="printer">
+                                <img src="printer2.png" alt="Printer - Side View" class="component-image" data-component="printer">
+                            </div>
+                        </div>
 
-                <!-- Component 3: Centrifuge -->
-                <div class="component-section">
-                    <div class="component-images">
-                        <img src="centrifuge1.png" alt="Centrifuge - Main View" class="component-image" data-component="centrifuge">
-                        <img src="centrifuge2.png" alt="Centrifuge - Side View" class="component-image" data-component="centrifuge">
-                    </div>
-                </div>
+                        <!-- Component 3: Centrifuge -->
+                        <div class="component-section" data-component="centrifuge">
+                            <div class="component-images">
+                                <img src="centrifuge1.png" alt="Centrifuge - Main View" class="component-image" data-component="centrifuge">
+                                <img src="centrifuge2.png" alt="Centrifuge - Side View" class="component-image" data-component="centrifuge">
+                            </div>
+                        </div>
 
-                <!-- Component 4: Slag/Waste Containment -->
-                <div class="component-section">
-                    <div class="component-images">
-                        <img src="slugwaste1.png" alt="Slag/Waste Containment - Main View" class="component-image" data-component="slag-waste">
-                        <img src="slugwaste2.png" alt="Slag/Waste Containment - Side View" class="component-image" data-component="slag-waste">
-                    </div>
-                </div>
+                        <!-- Component 4: Slag/Waste Containment -->
+                        <div class="component-section" data-component="slag-waste">
+                            <div class="component-images">
+                                <img src="slugwaste1.png" alt="Slag/Waste Containment - Main View" class="component-image" data-component="slag-waste">
+                                <img src="slugwaste2.png" alt="Slag/Waste Containment - Side View" class="component-image" data-component="slag-waste">
+                            </div>
+                        </div>
 
-                <!-- Component 5: Decontamination -->
-                <div class="component-section">
-                    <div class="component-images">
-                        <img src="heatcont1.png" alt="Heat Decontaminator - Main View" class="component-image" data-component="decontamination">
-                        <img src="heatcont2.png" alt="Heat Decontaminator - Side View" class="component-image" data-component="decontamination">
-                        <img src="heatcont3.png" alt="Heat Decontaminator - Internal View" class="component-image" data-component="decontamination">
-                    </div>
-                </div>
+                        <!-- Component 5: Decontamination -->
+                        <div class="component-section" data-component="decontamination">
+                            <div class="component-images">
+                                <img src="heatcont1.png" alt="Heat Decontaminator - Main View" class="component-image" data-component="decontamination">
+                                <img src="heatcont2.png" alt="Heat Decontaminator - Side View" class="component-image" data-component="decontamination">
+                                <img src="heatcont3.png" alt="Heat Decontaminator - Internal View" class="component-image" data-component="decontamination">
+                            </div>
+                        </div>
 
-                <!-- Component 6: Satellite Deposition -->
-                <div class="component-section">
-                    <div class="component-images">
-                        <img src="debrisd1.png" alt="Satellite Deposition - Main View" class="component-image" data-component="satellite-deposition">
-                        <img src="debrisd2.png" alt="Satellite Deposition - Side View" class="component-image" data-component="satellite-deposition">
-                    </div>
-                </div>
+                        <!-- Component 6: Satellite Deposition -->
+                        <div class="component-section" data-component="satellite-deposition">
+                            <div class="component-images">
+                                <img src="debrisd1.png" alt="Satellite Deposition - Main View" class="component-image" data-component="satellite-deposition">
+                                <img src="debrisd2.png" alt="Satellite Deposition - Side View" class="component-image" data-component="satellite-deposition">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -198,92 +212,88 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const images = document.querySelectorAll('.component-image');
+            const dropdown = document.getElementById('component-select');
             const descriptionArea = document.getElementById('component-description-area');
             const carouselTrack = document.querySelector('.rolling-gallery-track');
+            const componentSections = document.querySelectorAll('.component-section');
             let currentActiveComponent = null;
 
-            console.log('Found', images.length, 'component images');
-            images.forEach((image, index) => {
-                console.log('Setting up click handler for image', index);
-                image.addEventListener('click', function() {
-                    console.log('Image clicked!', index);
-                    console.log('Component image clicked - check console for debugging details');
-                    const component = this.getAttribute('data-component');
-                    console.log('Component:', component);
-                    const infoSection = document.getElementById(component + '-info');
-                    console.log('Info section found:', infoSection);
+            console.log('Found', componentSections.length, 'component sections');
 
-                    // If clicking the same component, hide the description and resume carousel
-                    if (currentActiveComponent === component) {
-                        console.log('Hiding description');
-                        hideDescription();
-                        return;
-                    }
+            // Set up dropdown change handler
+            dropdown.addEventListener('change', function() {
+                const selectedComponent = this.value;
+                console.log('Dropdown changed to:', selectedComponent);
 
-                    // Hide all other info sections first
-                    console.log('Hiding all other info sections');
-                    document.querySelectorAll('.component-info').forEach(info => {
-                        info.classList.remove('active');
-                    });
+                // If selecting the same component or empty value, hide description
+                if (!selectedComponent || currentActiveComponent === selectedComponent) {
+                    console.log('Hiding description');
+                    hideDescription();
+                    return;
+                }
 
-                    // Show the clicked component's info
-                    console.log('Showing clicked component info');
-                    infoSection.classList.add('active');
-                    descriptionArea.classList.add('active');
-                    currentActiveComponent = component;
+                // Show the selected component section
+                showComponentSection(selectedComponent);
 
-                    // Pause the carousel
-                    pauseCarousel();
+                // Show the component's description
+                const infoSection = document.getElementById(selectedComponent + '-info');
+                console.log('Info section found:', infoSection);
+
+                // Hide all other info sections first
+                document.querySelectorAll('.component-info').forEach(info => {
+                    info.classList.remove('active');
                 });
+
+                // Show the selected component's info
+                infoSection.classList.add('active');
+                descriptionArea.classList.add('active');
+                currentActiveComponent = selectedComponent;
             });
+
+            // Function to show a specific component section
+            function showComponentSection(component) {
+                console.log('Showing component section:', component);
+                // Hide all component sections first
+                componentSections.forEach(section => {
+                    section.style.display = 'none';
+                });
+                // Show the selected component section
+                const targetSection = document.querySelector(`[data-component="${component}"]`);
+                if (targetSection) {
+                    targetSection.style.display = 'block';
+                    console.log('Component section shown');
+                }
+            }
 
             // Function to hide description and resume carousel
             function hideDescription() {
                 console.log('hideDescription called');
                 console.log('Description area before:', descriptionArea.classList.toString());
+
+                // Hide all component sections
+                componentSections.forEach(section => {
+                    section.style.display = 'none';
+                });
+
+                // Hide all info sections and description area
                 document.querySelectorAll('.component-info').forEach(info => {
                     info.classList.remove('active');
                 });
                 descriptionArea.classList.remove('active');
                 currentActiveComponent = null;
                 console.log('Description area after:', descriptionArea.classList.toString());
-
-                // Resume the carousel
-                resumeCarousel();
             }
 
-            // Function to pause carousel
-            function pauseCarousel() {
-                if (carouselTrack) {
-                    carouselTrack.style.animationPlayState = 'paused';
-                }
-            }
+            // Carousel animation functions removed since we're not using animation
 
-            // Function to resume carousel
-            function resumeCarousel() {
-                if (carouselTrack) {
-                    carouselTrack.style.animationPlayState = 'running';
-                }
-            }
-
-            // Hide description when clicking outside
+            // Hide description when clicking outside the dropdown or description area
             document.addEventListener('click', function(event) {
-                if (!event.target.closest('.component-image') && !event.target.closest('.component-description-area')) {
+                if (!event.target.closest('.component-dropdown') && !event.target.closest('.component-description-area')) {
                     hideDescription();
                 }
             });
 
-            // Also pause carousel on hover (as before)
-            const carouselContainer = document.querySelector('.rolling-gallery-container');
-            if (carouselContainer) {
-                carouselContainer.addEventListener('mouseenter', pauseCarousel);
-                carouselContainer.addEventListener('mouseleave', function() {
-                    if (!currentActiveComponent) {
-                        resumeCarousel();
-                    }
-                });
-            }
+            // Carousel hover behavior removed since we're not using animation
         });
     </script>
 </body>

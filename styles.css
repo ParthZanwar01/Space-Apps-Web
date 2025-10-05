@@ -46,6 +46,62 @@ body {
     flex: 1;
 }
 
+/* Component Selector Styles */
+.component-selector {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin: 30px 0;
+    padding: 20px;
+}
+
+.selector-label {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #ffdd44;
+    text-shadow: 0 0 10px rgba(255, 221, 68, 0.3);
+}
+
+.component-dropdown {
+    background: linear-gradient(145deg, #1a1a2e 0%, #16213e 100%);
+    border: 2px solid #00d4ff;
+    border-radius: 8px;
+    padding: 12px 20px;
+    font-size: 1rem;
+    color: #ffffff;
+    cursor: pointer;
+    min-width: 250px;
+    box-shadow: 0 4px 15px rgba(0, 212, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.component-dropdown:hover {
+    border-color: #ffdd44;
+    box-shadow: 0 4px 20px rgba(255, 221, 68, 0.3);
+}
+
+.component-dropdown:focus {
+    outline: none;
+    border-color: #ffdd44;
+    box-shadow: 0 0 0 3px rgba(255, 221, 68, 0.3);
+}
+
+.component-dropdown option {
+    background: #1a1a2e;
+    color: #ffffff;
+    padding: 8px;
+}
+
+/* Component section visibility */
+.component-section {
+    display: none;
+}
+
+.component-section:first-child {
+    display: block;
+}
+
 .rolling-gallery-container {
     overflow: hidden;
     width: 100%;
@@ -55,13 +111,12 @@ body {
 .rolling-gallery-track {
     display: flex;
     gap: 25px;
-    animation: rolling-gallery 45s linear infinite;
+    /* animation: rolling-gallery 45s linear infinite; */
     width: max-content;
+    justify-content: center;
 }
 
-.rolling-gallery-container:hover .rolling-gallery-track {
-    animation-play-state: paused;
-}
+/* Hover behavior removed since we're not using animation */
 
 .components-grid {
     display: flex;
