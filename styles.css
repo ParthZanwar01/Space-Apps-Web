@@ -496,42 +496,41 @@ body {
     animation: gentle-pulse 3s ease-in-out infinite;
 }
 
-/* Hotspot Positioning - EXACTLY matching user's reference image */
+/* Hotspot Positioning - Based on actual frontal_view.png image */
 .hotspot-1 {
-    /* Hotspot 1 - EXACT position from user's image */
-    top: 15%;
-    right: 35%;
+    /* Component 1 - Spool (left side, need to find exact position) */
+    top: 40%;
+    left: 10%;
 }
 
 .hotspot-2 {
-    /* Hotspot 2 - EXACT position from user's image */
-    top: 38%;
-    right: 12%;
-    transform: translateY(-50%);
+    /* Component 2 - Printer (red cylinder, upper middle) */
+    top: 15%;
+    left: 42%;
 }
 
 .hotspot-3 {
-    /* Hotspot 3 - EXACT position from user's image */
-    top: 52%;
-    left: 8%;
+    /* Component 3 - Centrifuge (center rotating mechanism) */
+    top: 42%;
+    left: 38%;
 }
 
 .hotspot-4 {
-    /* Hotspot 4 - EXACT position from user's image */
-    bottom: 22%;
-    right: 32%;
+    /* Component 4 - Slag/Waste (right side vertical component) */
+    top: 25%;
+    right: 12%;
 }
 
 .hotspot-5 {
-    /* Hotspot 5 - EXACT position from user's image */
-    bottom: 28%;
-    left: 12%;
+    /* Component 5 - Decontamination (bottom left round component) */
+    bottom: 30%;
+    left: 18%;
 }
 
 .hotspot-6 {
-    /* Hotspot 6 - EXACT position from user's image */
-    bottom: 15%;
-    right: 28%;
+    /* Component 6 - Satellite Deposition (bottom right rectangular) */
+    bottom: 18%;
+    right: 18%;
 }
 
 /* Info panel styles removed since panel was removed */
