@@ -208,7 +208,7 @@
                 console.log('Setting up click handler for image', index);
                 image.addEventListener('click', function() {
                     console.log('Image clicked!', index);
-                    alert('Image clicked! Check console for details.');
+                    console.log('Component image clicked - check console for debugging details');
                     const component = this.getAttribute('data-component');
                     console.log('Component:', component);
                     const infoSection = document.getElementById(component + '-info');
