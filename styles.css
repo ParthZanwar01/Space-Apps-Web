@@ -138,6 +138,14 @@ body {
     margin: 0 auto;
 }
 
+.component-info {
+    display: none;
+}
+
+.component-info.active {
+    display: block;
+}
+
 .component-title {
     font-size: 2.2rem;
     font-weight: 600;
