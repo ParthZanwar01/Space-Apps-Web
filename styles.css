@@ -49,9 +49,10 @@ body {
 .components-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 25px;
     margin-bottom: 50px;
     justify-content: center;
+    align-items: stretch;
 }
 
 .component-section {
@@ -147,7 +148,8 @@ body {
     position: absolute;
     left: 0;
     font-weight: bold;
-    font-size: 0.8em;
+    font-size: 1em;
+    margin-top: 2px;
 }
 
 .component-specs li:last-child {
