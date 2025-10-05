@@ -1,0 +1,434 @@
+/* Full-screen styles for ORCA Technologies */
+
+/* Base full-screen layout */
+.fullscreen-mode {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%) !important;
+  z-index: 9999 !important;
+}
+
+/* Hide elements in fullscreen */
+.fullscreen-mode .usa-header,
+.fullscreen-mode .usa-banner,
+.fullscreen-mode .usa-nav,
+.fullscreen-mode .usa-navbar {
+  display: none !important;
+}
+
+/* Full-screen content container */
+.fullscreen-mode .main-container {
+  width: 100vw !important;
+  height: 100vh !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  background: transparent !important;
+}
+
+/* Full-screen content wrapper */
+.fullscreen-mode .content-wrapper {
+  width: 100% !important;
+  height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  padding: 2rem !important;
+  box-sizing: border-box !important;
+  background: transparent !important;
+}
+
+/* Full-screen carousel */
+.fullscreen-mode .carousel-wrapper {
+  width: 100vw !important;
+  height: 100vh !important;
+  max-width: none !important;
+  max-height: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+/* Full-screen carousel container */
+.fullscreen-mode .carousel-container {
+  width: 100% !important;
+  height: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* Full-screen carousel slides */
+.fullscreen-mode .carousel-slide {
+  width: 100vw !important;
+  height: 100vh !important;
+  max-width: none !important;
+  max-height: none !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Full-screen component cards */
+.fullscreen-mode .component-card {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  max-height: none !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  background: transparent !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  border: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Full-screen component images */
+.fullscreen-mode .component-image {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  max-height: none !important;
+  object-fit: contain !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+
+/* Full-screen navigation controls */
+.fullscreen-mode .carousel-nav {
+  position: fixed !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  z-index: 10000 !important;
+  background: rgba(0, 0, 0, 0.8) !important;
+  color: white !important;
+  border: 2px solid rgba(255, 255, 255, 0.3) !important;
+  border-radius: 50% !important;
+  width: 60px !important;
+  height: 60px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 24px !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+}
+
+.fullscreen-mode .carousel-nav:hover {
+  background: rgba(255, 255, 255, 0.2) !important;
+  border-color: rgba(255, 255, 255, 0.6) !important;
+  transform: translateY(-50%) scale(1.1) !important;
+}
+
+.fullscreen-mode .carousel-nav.prev {
+  left: 30px !important;
+}
+
+.fullscreen-mode .carousel-nav.next {
+  right: 30px !important;
+}
+
+/* Full-screen dots */
+.fullscreen-mode .carousel-dots {
+  position: fixed !important;
+  bottom: 30px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  z-index: 10000 !important;
+  display: flex !important;
+  gap: 15px !important;
+}
+
+.fullscreen-mode .carousel-dot {
+  width: 15px !important;
+  height: 15px !important;
+  border-radius: 50% !important;
+  background: rgba(255, 255, 255, 0.3) !important;
+  border: 2px solid rgba(255, 255, 255, 0.5) !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+}
+
+.fullscreen-mode .carousel-dot.active {
+  background: rgba(255, 255, 255, 0.9) !important;
+  border-color: rgba(255, 255, 255, 1) !important;
+  transform: scale(1.2) !important;
+}
+
+.fullscreen-mode .carousel-dot:hover {
+  background: rgba(255, 255, 255, 0.6) !important;
+  transform: scale(1.1) !important;
+}
+
+/* Full-screen toggle button */
+.fullscreen-toggle-btn {
+  position: fixed !important;
+  top: 20px !important;
+  right: 20px !important;
+  z-index: 10000 !important;
+  background: rgba(0, 0, 0, 0.8) !important;
+  color: white !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  padding: 12px 18px !important;
+  border-radius: 8px !important;
+  cursor: pointer !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  transition: all 0.3s ease !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+.fullscreen-toggle-btn:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-color: rgba(255, 255, 255, 0.6) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Full-screen content styling */
+.fullscreen-mode .usa-layout-docs__main {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center !important;
+  color: white !important;
+}
+
+.fullscreen-mode .usa-layout-docs__main h1 {
+  font-size: 4rem !important;
+  margin-bottom: 2rem !important;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5) !important;
+  background: linear-gradient(45deg, #fff, #ccc) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+}
+
+.fullscreen-mode .usa-intro {
+  font-size: 1.5rem !important;
+  margin-bottom: 3rem !important;
+  opacity: 0.9 !important;
+  max-width: 800px !important;
+  line-height: 1.6 !important;
+}
+
+/* Full-screen technology content */
+.fullscreen-mode .technology-content {
+  width: 100% !important;
+  max-width: 1200px !important;
+  padding: 0 2rem !important;
+}
+
+.fullscreen-mode .tech-section {
+  margin-bottom: 4rem !important;
+  padding: 2rem !important;
+  background: rgba(255, 255, 255, 0.05) !important;
+  border-radius: 15px !important;
+  backdrop-filter: blur(10px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.fullscreen-mode .tech-section h2 {
+  color: white !important;
+  font-size: 2.5rem !important;
+  margin-bottom: 1.5rem !important;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5) !important;
+}
+
+.fullscreen-mode .tech-section h3 {
+  color: #e0e0e0 !important;
+  font-size: 1.8rem !important;
+  margin-bottom: 1rem !important;
+}
+
+.fullscreen-mode .tech-section p {
+  color: #ccc !important;
+  font-size: 1.1rem !important;
+  line-height: 1.7 !important;
+  margin-bottom: 1rem !important;
+}
+
+/* Full-screen process steps */
+.fullscreen-mode .process-steps {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+  gap: 2rem !important;
+  margin: 2rem 0 !important;
+}
+
+.fullscreen-mode .step {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border-radius: 12px !important;
+  padding: 1.5rem !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  transition: all 0.3s ease !important;
+}
+
+.fullscreen-mode .step:hover {
+  background: rgba(255, 255, 255, 0.12) !important;
+  transform: translateY(-5px) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3) !important;
+}
+
+.fullscreen-mode .step-number {
+  background: linear-gradient(45deg, #0071bc, #00a6d2) !important;
+  color: white !important;
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-weight: bold !important;
+  font-size: 1.2rem !important;
+  margin-bottom: 1rem !important;
+}
+
+/* Full-screen space benefits */
+.fullscreen-mode .space-benefits {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
+  gap: 1.5rem !important;
+  margin: 2rem 0 !important;
+}
+
+.fullscreen-mode .benefit {
+  background: rgba(255, 255, 255, 0.06) !important;
+  border-radius: 10px !important;
+  padding: 1.5rem !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  transition: all 0.3s ease !important;
+}
+
+.fullscreen-mode .benefit:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+  transform: translateY(-3px) !important;
+}
+
+.fullscreen-mode .benefit h3 {
+  color: #00a6d2 !important;
+  font-size: 1.3rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
+/* Full-screen tech specs */
+.fullscreen-mode .tech-specs {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) !important;
+  gap: 1rem !important;
+  margin: 2rem 0 !important;
+}
+
+.fullscreen-mode .spec-item {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border-radius: 8px !important;
+  padding: 1rem !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  text-align: center !important;
+}
+
+.fullscreen-mode .spec-item h4 {
+  color: #00a6d2 !important;
+  font-size: 1rem !important;
+  margin-bottom: 0.5rem !important;
+  font-weight: 600 !important;
+}
+
+.fullscreen-mode .spec-item p {
+  color: white !important;
+  font-size: 1.1rem !important;
+  font-weight: 500 !important;
+  margin: 0 !important;
+}
+
+/* Responsive full-screen adjustments */
+@media (max-width: 768px) {
+  .fullscreen-mode .usa-layout-docs__main h1 {
+    font-size: 2.5rem !important;
+  }
+  
+  .fullscreen-mode .usa-intro {
+    font-size: 1.2rem !important;
+  }
+  
+  .fullscreen-mode .carousel-nav {
+    width: 50px !important;
+    height: 50px !important;
+    font-size: 20px !important;
+  }
+  
+  .fullscreen-mode .carousel-nav.prev {
+    left: 15px !important;
+  }
+  
+  .fullscreen-mode .carousel-nav.next {
+    right: 15px !important;
+  }
+  
+  .fullscreen-mode .carousel-dots {
+    bottom: 20px !important;
+  }
+  
+  .fullscreen-mode .fullscreen-toggle-btn {
+    top: 15px !important;
+    right: 15px !important;
+    padding: 10px 15px !important;
+    font-size: 12px !important;
+  }
+}
+
+/* Animation for entering fullscreen */
+@keyframes fullscreenEnter {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.fullscreen-mode {
+  animation: fullscreenEnter 0.5s ease-out !important;
+}
+
+/* Smooth transitions */
+* {
+  transition: all 0.3s ease !important;
+}
+
+/* Hide scrollbars in fullscreen */
+.fullscreen-mode ::-webkit-scrollbar {
+  display: none !important;
+}
+
+.fullscreen-mode {
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+}
