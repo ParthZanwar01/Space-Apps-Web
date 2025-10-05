@@ -3,105 +3,167 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Satellite Prototype - Interactive Display</title>
+    <title>Satellite Prototype - Component Gallery</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <div class="container">
         <header class="header">
             <h1 class="title">Satellite Prototype</h1>
-            <p class="subtitle">Interactive Component Explorer</p>
+            <p class="subtitle">Component Gallery</p>
         </header>
 
         <main class="main-content">
-            <!-- Satellite Image at Top -->
-            <div class="satellite-display">
-                <img src="frontal_view.png" alt="Satellite Prototype" class="main-satellite-image">
-
-                <!-- Interactive Hotspots on Satellite Image -->
-                <div class="hotspot hotspot-1" data-component="spool">
-                    <div class="hotspot-pulse"></div>
-                    <div class="hotspot-number">1</div>
-                </div>
-
-                <div class="hotspot hotspot-2" data-component="printer">
-                    <div class="hotspot-pulse"></div>
-                    <div class="hotspot-number">2</div>
-                </div>
-
-                <div class="hotspot hotspot-3" data-component="centrifuge">
-                    <div class="hotspot-pulse"></div>
-                    <div class="hotspot-number">3</div>
-                </div>
-
-                <div class="hotspot hotspot-4" data-component="slag-waste">
-                    <div class="hotspot-pulse"></div>
-                    <div class="hotspot-number">4</div>
-                </div>
-
-                <div class="hotspot hotspot-5" data-component="decontamination">
-                    <div class="hotspot-pulse"></div>
-                    <div class="hotspot-number">5</div>
-                </div>
-
-                <div class="hotspot hotspot-6" data-component="satellite-deposition">
-                    <div class="hotspot-pulse"></div>
-                    <div class="hotspot-number">6</div>
-                </div>
-            </div>
-
-            <!-- Component Cards Below -->
             <div class="components-grid">
-                <div class="component-card" data-component="spool">
-                    <div class="component-number">1</div>
-                    <h3>Spool</h3>
-                    <p>A rotating mechanism that manages and dispenses materials within the satellite system.</p>
-                    <button class="details-btn" onclick="showComponentDetails('spool')">Learn More</button>
+                <!-- Component 1: Spool -->
+                <div class="component-section">
+                    <div class="component-images">
+                        <img src="spool1.png" alt="Spool - Frontal View" class="component-image">
+                        <img src="spool2.png" alt="Spool - Back View" class="component-image">
+                    </div>
+                    <div class="component-info">
+                        <h2 class="component-title">1. Spool</h2>
+                        <p class="component-description">
+                            A rotating mechanism that manages and dispenses materials within the satellite system.
+                            Provides controlled deployment and retraction capabilities for various materials and components.
+                        </p>
+                        <div class="component-specs">
+                            <h3>Technical Specifications:</h3>
+                            <ul>
+                                <li>Diameter: 150mm</li>
+                                <li>Capacity: 500m of material</li>
+                                <li>Motor: Stepper motor drive</li>
+                                <li>Material: Carbon fiber composite</li>
+                                <li>Control: Precision positioning system</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="component-card" data-component="printer">
-                    <div class="component-number">2</div>
-                    <h3>Printer</h3>
-                    <p>An advanced manufacturing system capable of 3D printing components in space.</p>
-                    <button class="details-btn" onclick="showComponentDetails('printer')">Learn More</button>
+                <!-- Component 2: Printer -->
+                <div class="component-section">
+                    <div class="component-images">
+                        <img src="frontal_view.png" alt="Printer - Frontal View" class="component-image">
+                        <img src="back_view.png" alt="Printer - Back View" class="component-image">
+                    </div>
+                    <div class="component-info">
+                        <h2 class="component-title">2. Printer</h2>
+                        <p class="component-description">
+                            An advanced manufacturing system capable of 3D printing components in space.
+                            Uses additive manufacturing technology for on-demand production of replacement parts and tools.
+                        </p>
+                        <div class="component-specs">
+                            <h3>Technical Specifications:</h3>
+                            <ul>
+                                <li>Print volume: 200mm × 200mm × 200mm</li>
+                                <li>Resolution: 0.1mm layer height</li>
+                                <li>Materials: Thermoplastic polymers</li>
+                                <li>Power consumption: 200W</li>
+                                <li>Temperature range: 180-280°C</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="component-card" data-component="centrifuge">
-                    <div class="component-number">3</div>
-                    <h3>Centrifuge</h3>
-                    <p>A high-speed rotating device for separating materials and creating artificial gravity.</p>
-                    <button class="details-btn" onclick="showComponentDetails('centrifuge')">Learn More</button>
+                <!-- Component 3: Centrifuge -->
+                <div class="component-section">
+                    <div class="component-images">
+                        <img src="frontal_view.png" alt="Centrifuge - Frontal View" class="component-image">
+                        <img src="back_view.png" alt="Centrifuge - Back View" class="component-image">
+                    </div>
+                    <div class="component-info">
+                        <h2 class="component-title">3. Centrifuge</h2>
+                        <p class="component-description">
+                            A high-speed rotating device for separating materials, processing samples,
+                            or creating artificial gravity conditions within the satellite environment.
+                        </p>
+                        <div class="component-specs">
+                            <h3>Technical Specifications:</h3>
+                            <ul>
+                                <li>Max RPM: 10,000</li>
+                                <li>Capacity: 6 sample tubes</li>
+                                <li>Force: Up to 10,000g</li>
+                                <li>Control: Variable speed</li>
+                                <li>Safety: Automatic imbalance detection</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="component-card" data-component="slag-waste">
-                    <div class="component-number">4</div>
-                    <h3>Slag/Waste Containment</h3>
-                    <p>A specialized containment system for safely storing waste materials and byproducts.</p>
-                    <button class="details-btn" onclick="showComponentDetails('slag-waste')">Learn More</button>
+                <!-- Component 4: Slag/Waste Containment -->
+                <div class="component-section">
+                    <div class="component-images">
+                        <img src="frontal_view.png" alt="Slag/Waste - Frontal View" class="component-image">
+                        <img src="back_view.png" alt="Slag/Waste - Back View" class="component-image">
+                    </div>
+                    <div class="component-info">
+                        <h2 class="component-title">4. Slag/Waste Containment</h2>
+                        <p class="component-description">
+                            A specialized containment system designed to safely store and manage waste materials,
+                            slag, or byproducts from manufacturing processes in the space environment.
+                        </p>
+                        <div class="component-specs">
+                            <h3>Technical Specifications:</h3>
+                            <ul>
+                                <li>Volume: 5 liters</li>
+                                <li>Material: Stainless steel</li>
+                                <li>Temperature range: -50°C to +200°C</li>
+                                <li>Pressure rating: 15 bar</li>
+                                <li>Seal: Hermetic sealing system</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="component-card" data-component="decontamination">
-                    <div class="component-number">5</div>
-                    <h3>Decontamination</h3>
-                    <p>A cleaning and sterilization system that removes contaminants from the satellite environment.</p>
-                    <button class="details-btn" onclick="showComponentDetails('decontamination')">Learn More</button>
+                <!-- Component 5: Decontamination -->
+                <div class="component-section">
+                    <div class="component-images">
+                        <img src="frontal_view.png" alt="Decontamination - Frontal View" class="component-image">
+                        <img src="back_view.png" alt="Decontamination - Back View" class="component-image">
+                    </div>
+                    <div class="component-info">
+                        <h2 class="component-title">5. Decontamination</h2>
+                        <p class="component-description">
+                            A cleaning and sterilization system that removes contaminants, sterilizes surfaces,
+                            and maintains sterile conditions within the satellite environment using advanced methods.
+                        </p>
+                        <div class="component-specs">
+                            <h3>Technical Specifications:</h3>
+                            <ul>
+                                <li>Method: UV sterilization + chemical cleaning</li>
+                                <li>Coverage: 360° surface treatment</li>
+                                <li>Cycle time: 30 minutes</li>
+                                <li>Power: 50W UV lamp</li>
+                                <li>Safety: Automatic shutdown systems</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="component-card" data-component="satellite-deposition">
-                    <div class="component-number">6</div>
-                    <h3>Satellite Deposition</h3>
-                    <p>A precision deposition system that applies coatings and materials to satellite components.</p>
-                    <button class="details-btn" onclick="showComponentDetails('satellite-deposition')">Learn More</button>
-                </div>
-            </div>
-
-            <!-- Details Popup -->
-            <div id="details-popup" class="details-popup">
-                <div class="popup-content">
-                    <span class="close-btn" onclick="closeDetails()">&times;</span>
-                    <div id="popup-details"></div>
+                <!-- Component 6: Satellite Deposition -->
+                <div class="component-section">
+                    <div class="component-images">
+                        <img src="frontal_view.png" alt="Satellite Deposition - Frontal View" class="component-image">
+                        <img src="back_view.png" alt="Satellite Deposition - Back View" class="component-image">
+                    </div>
+                    <div class="component-info">
+                        <h2 class="component-title">6. Satellite Deposition</h2>
+                        <p class="component-description">
+                            A precision deposition system that applies coatings, materials, or protective layers
+                            to satellite components using advanced physical vapor deposition techniques.
+                        </p>
+                        <div class="component-specs">
+                            <h3>Technical Specifications:</h3>
+                            <ul>
+                                <li>Deposition method: Physical vapor deposition</li>
+                                <li>Thickness range: 0.1-10 microns</li>
+                                <li>Materials: Metals, ceramics, polymers</li>
+                                <li>Vacuum level: 10^-6 Torr</li>
+                                <li>Substrate heating: Up to 400°C</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </main>
@@ -110,7 +172,5 @@
             <p>&copy; 2024 Satellite Prototype Project</p>
         </footer>
     </div>
-
-    <script src="script.js"></script>
 </body>
 </html>
