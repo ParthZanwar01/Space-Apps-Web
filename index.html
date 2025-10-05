@@ -21,10 +21,10 @@
                 <!-- Component 1: Spool -->
                 <div class="component-section">
                     <div class="component-images">
-                        <img src="spool1.png" alt="Spool - Frontal View" class="component-image">
-                        <img src="spool2.png" alt="Spool - Back View" class="component-image">
+                        <img src="spool1.png" alt="Spool - Frontal View" class="component-image" data-component="spool">
+                        <img src="spool2.png" alt="Spool - Back View" class="component-image" data-component="spool">
                     </div>
-                    <div class="component-info">
+                    <div class="component-info" id="spool-info">
                         <h2 class="component-title">1. Spool</h2>
                         <p class="component-description">
                             This precision-engineered spool system enables controlled deployment and retrieval of materials
@@ -47,10 +47,10 @@
                 <!-- Component 2: Printer -->
                 <div class="component-section">
                     <div class="component-images">
-                        <img src="printer1.png" alt="Printer - Main View" class="component-image">
-                        <img src="printer2.png" alt="Printer - Side View" class="component-image">
+                        <img src="printer1.png" alt="Printer - Main View" class="component-image" data-component="printer">
+                        <img src="printer2.png" alt="Printer - Side View" class="component-image" data-component="printer">
                     </div>
-                    <div class="component-info">
+                    <div class="component-info" id="printer-info">
                         <h2 class="component-title">2. Printer</h2>
                         <p class="component-description">
                             This state-of-the-art 3D printer enables on-demand manufacturing of critical components
@@ -73,10 +73,10 @@
                 <!-- Component 3: Centrifuge -->
                 <div class="component-section">
                     <div class="component-images">
-                        <img src="centrifuge1.png" alt="Centrifuge - Main View" class="component-image">
-                        <img src="centrifuge2.png" alt="Centrifuge - Side View" class="component-image">
+                        <img src="centrifuge1.png" alt="Centrifuge - Main View" class="component-image" data-component="centrifuge">
+                        <img src="centrifuge2.png" alt="Centrifuge - Side View" class="component-image" data-component="centrifuge">
                     </div>
-                    <div class="component-info">
+                    <div class="component-info" id="centrifuge-info">
                         <h2 class="component-title">3. Centrifuge</h2>
                         <p class="component-description">
                             This high-speed centrifuge provides artificial gravity simulation and enables
@@ -99,10 +99,10 @@
                 <!-- Component 4: Slag/Waste Containment -->
                 <div class="component-section">
                     <div class="component-images">
-                        <img src="slugwaste1.png" alt="Slag/Waste Containment - Main View" class="component-image">
-                        <img src="slugwaste2.png" alt="Slag/Waste Containment - Side View" class="component-image">
+                        <img src="slugwaste1.png" alt="Slag/Waste Containment - Main View" class="component-image" data-component="slag-waste">
+                        <img src="slugwaste2.png" alt="Slag/Waste Containment - Side View" class="component-image" data-component="slag-waste">
                     </div>
-                    <div class="component-info">
+                    <div class="component-info" id="slag-waste-info">
                         <h2 class="component-title">4. Slag/Waste Containment</h2>
                         <p class="component-description">
                             This secure containment system safely stores and manages waste materials and
@@ -125,11 +125,11 @@
                 <!-- Component 5: Decontamination -->
                 <div class="component-section">
                     <div class="component-images">
-                        <img src="heatcont1.png" alt="Heat Decontaminator - Main View" class="component-image">
-                        <img src="heatcont2.png" alt="Heat Decontaminator - Side View" class="component-image">
-                        <img src="heatcont3.png" alt="Heat Decontaminator - Internal View" class="component-image">
+                        <img src="heatcont1.png" alt="Heat Decontaminator - Main View" class="component-image" data-component="decontamination">
+                        <img src="heatcont2.png" alt="Heat Decontaminator - Side View" class="component-image" data-component="decontamination">
+                        <img src="heatcont3.png" alt="Heat Decontaminator - Internal View" class="component-image" data-component="decontamination">
                     </div>
-                    <div class="component-info">
+                    <div class="component-info" id="decontamination-info">
                         <h2 class="component-title">5. Decontamination</h2>
                         <p class="component-description">
                             This advanced decontamination system ensures sterile conditions aboard the satellite
@@ -152,10 +152,10 @@
                 <!-- Component 6: Satellite Deposition -->
                 <div class="component-section">
                     <div class="component-images">
-                        <img src="debrisd1.png" alt="Satellite Deposition - Main View" class="component-image">
-                        <img src="debrisd2.png" alt="Satellite Deposition - Side View" class="component-image">
+                        <img src="debrisd1.png" alt="Satellite Deposition - Main View" class="component-image" data-component="satellite-deposition">
+                        <img src="debrisd2.png" alt="Satellite Deposition - Side View" class="component-image" data-component="satellite-deposition">
                     </div>
-                    <div class="component-info">
+                    <div class="component-info" id="satellite-deposition-info">
                         <h2 class="component-title">6. Satellite Deposition</h2>
                         <p class="component-description">
                             This precision coating system applies protective layers and specialized materials
@@ -182,5 +182,28 @@
             <p>&copy; 2024 Satellite Prototype Project</p>
         </footer>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const images = document.querySelectorAll('.component-image');
+
+            images.forEach(image => {
+                image.addEventListener('click', function() {
+                    const component = this.getAttribute('data-component');
+                    const infoSection = document.getElementById(component + '-info');
+
+                    // Hide all other info sections
+                    document.querySelectorAll('.component-info').forEach(info => {
+                        if (info !== infoSection) {
+                            info.classList.remove('active');
+                        }
+                    });
+
+                    // Toggle the clicked info section
+                    infoSection.classList.toggle('active');
+                });
+            });
+        });
+    </script>
 </body>
 </html>

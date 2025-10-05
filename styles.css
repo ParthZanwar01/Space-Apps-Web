@@ -72,15 +72,13 @@ body {
 .component-section {
     background: linear-gradient(145deg, #1a1a2e 0%, #16213e 100%);
     border-radius: 15px;
-    padding: 25px;
+    padding: 20px;
     border: 3px solid #00d4ff;
     transition: all 0.3s ease;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(0, 212, 255, 0.1);
-    display: flex;
-    gap: 20px;
-    align-items: flex-start;
     position: relative;
     overflow: hidden;
+    margin-bottom: 10px;
 }
 
 .component-section:hover {
@@ -92,9 +90,8 @@ body {
 .component-images {
     display: flex;
     gap: 10px;
-    flex-direction: column;
-    flex-shrink: 0;
-    width: 120px;
+    justify-content: center;
+    margin-bottom: 0;
 }
 
 .component-image {
@@ -111,6 +108,17 @@ body {
     border-color: #ffdd44;
     transform: scale(1.05);
     box-shadow: 0 5px 15px rgba(255, 221, 68, 0.3);
+}
+
+.component-info {
+    display: none;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 2px solid #00d4ff;
+}
+
+.component-info.active {
+    display: block;
 }
 
 .component-title {
@@ -173,10 +181,6 @@ body {
     border-bottom: none;
 }
 
-.component-info {
-    flex: 1;
-    min-width: 0;
-}
 
 .footer {
     text-align: center;
@@ -224,18 +228,14 @@ body {
     }
 
     .component-section {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
         width: 100%;
         max-width: 400px;
+        margin: 0 auto 20px auto;
     }
 
     .component-images {
         flex-direction: row;
         justify-content: center;
-        width: 100%;
-        margin-bottom: 20px;
         gap: 8px;
     }
 
@@ -252,6 +252,11 @@ body {
     .component-description {
         font-size: 0.95rem;
         text-align: left;
+    }
+
+    .component-info {
+        margin-top: 10px;
+        padding-top: 10px;
     }
 }
 
