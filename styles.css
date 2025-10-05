@@ -81,10 +81,10 @@ body {
 }
 
 .component-image {
-    width: 120px;
-    height: 90px;
+    width: 100px;
+    height: 75px;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 8px;
     border: 2px solid #00d4ff;
     transition: all 0.3s ease;
     cursor: pointer;
@@ -204,13 +204,13 @@ body {
     .component-images {
         flex-direction: column;
         align-items: center;
-        gap: 10px;
+        gap: 8px;
     }
 
     .component-image {
         width: 100%;
-        max-width: 200px;
-        height: 120px;
+        max-width: 180px;
+        height: 100px;
     }
 
     .component-title {
