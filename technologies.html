@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ORCA Technologies - Advanced Space Systems</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">ORCA Technologies</h1>
+            <p class="subtitle">Advanced Space Manufacturing & Debris Capture Systems</p>
+
+            <!-- Navigation Links -->
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="components.html" class="nav-link">Component Gallery</a>
+                <a href="technologies.html" class="nav-link active">ORCA Technologies</a>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <!-- Component Selection Dropdown -->
+            <div class="component-selector">
+                <label for="component-select" class="selector-label">Select ORCA Technology:</label>
+                <select id="component-select" class="component-dropdown">
+                    <option value="">Choose a technology...</option>
+                    <option value="ebchm" selected>1. Electron-Beam Cold-Hearth Melting (EBCHM)</option>
+                    <option value="ebam">2. Electron-Beam Additive Manufacturing (EBAM)</option>
+                    <option value="gecko-grippers">3. Gecko-Inspired Adhesive Grippers</option>
+                </select>
+            </div>
+
+            <!-- Single Component Display -->
+            <div class="rolling-gallery-container">
+                <div class="rolling-gallery-track">
+                    <div class="components-grid">
+                        <!-- Technology 1: EBCHM -->
+                        <div class="component-section" data-component="ebchm">
+                            <div class="component-images">
+                                <img src="spool1.png" alt="EBCHM Electron Gun" class="component-image" data-component="ebchm">
+                                <img src="spool2.png" alt="EBCHM Cold Hearth Process" class="component-image" data-component="ebchm">
+                            </div>
+                        </div>
+
+                        <!-- Technology 2: EBAM -->
+                        <div class="component-section" data-component="ebam">
+                            <div class="component-images">
+                                <img src="printer1.png" alt="EBAM Print Head" class="component-image" data-component="ebam">
+                                <img src="printer2.png" alt="EBAM Wire Feed System" class="component-image" data-component="ebam">
+                            </div>
+                        </div>
+
+                        <!-- Technology 3: Gecko Grippers -->
+                        <div class="component-section" data-component="gecko-grippers">
+                            <div class="component-images">
+                                <img src="centrifuge1.png" alt="Gecko Gripper Microstructure" class="component-image" data-component="gecko-grippers">
+                                <img src="centrifuge2.png" alt="Gecko Gripper Deployment" class="component-image" data-component="gecko-grippers">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Technology Description Area -->
+            <div class="component-description-area" id="technologies-description-area">
+                <div class="description-container">
+                    <div class="component-info" id="ebchm-info">
+                        <h2 class="component-title">1. Electron-Beam Cold-Hearth Melting (EBCHM)</h2>
+                        <p class="component-description">
+                            Electron-beam cold-hearth melting is used to refine and purify mixed-metal debris collected from orbit into uniform, high-quality alloys suitable for manufacturing.
+                        </p>
+                        <div class="component-specs">
+                            <h3>How It Works:</h3>
+                            <ul>
+                                <li><strong>Electron Beam Generation:</strong> High-voltage electron gun (20–60 kilovolts) emits focused electrons in vacuum</li>
+                                <li><strong>Cold-Hearth Design:</strong> Water-cooled copper hearth prevents contamination</li>
+                                <li><strong>Refinement Process:</strong> Molten pool separates contaminants - dense inclusions sink, light impurities become slag</li>
+                                <li><strong>Space Optimization:</strong> Natural vacuum eliminates need for pumps, prevents oxidation</li>
+                            </ul>
+                            <h3>Space Applications:</h3>
+                            <ul>
+                                <li>Refines scrap metal into aerospace-grade alloys</li>
+                                <li>Electromagnetic fields position and stir melt in microgravity</li>
+                                <li>Produces materials for in-orbit manufacturing</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="component-info" id="ebam-info">
+                        <h2 class="component-title">2. Electron-Beam Additive Manufacturing (EBAM)</h2>
+                        <p class="component-description">
+                            Electron-beam additive manufacturing enables in-space 3D printing of structural metal components using wire feedstock produced from refined debris.
+                        </p>
+                        <div class="component-specs">
+                            <h3>How It Works:</h3>
+                            <ul>
+                                <li><strong>Feedstock Delivery:</strong> Wire feed (1–2 mm diameter) supplied into print head</li>
+                                <li><strong>Melting and Deposition:</strong> Electron beam melts wire tip and deposits molten metal</li>
+                                <li><strong>Layer Formation:</strong> Robotic gantry builds part layer by layer with real-time sensors</li>
+                                <li><strong>Result:</strong> Near-net-shape, dense components requiring minimal post-processing</li>
+                            </ul>
+                            <h3>Space Applications:</h3>
+                            <ul>
+                                <li>Eliminates need to launch bulky structures from Earth</li>
+                                <li>Fabricates trusses, panels, satellite frames in orbit</li>
+                                <li>Uses reclaimed materials for sustainable manufacturing</li>
+                                <li>Based on NASA's Electron Beam Freeform Fabrication (EBF³)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="component-info" id="gecko-grippers-info">
+                        <h2 class="component-title">3. Gecko-Inspired Adhesive Grippers</h2>
+                        <p class="component-description">
+                            Gecko-inspired adhesive grippers allow ORCA's micro-debris drones to capture small or irregularly shaped debris without using suction, magnets, or mechanical force.
+                        </p>
+                        <div class="component-specs">
+                            <h3>How It Works:</h3>
+                            <ul>
+                                <li><strong>Microstructure Design:</strong> Synthetic microfibers mimic gecko setae</li>
+                                <li><strong>Adhesion Mechanism:</strong> Van der Waals forces create strong molecular bonds</li>
+                                <li><strong>Control and Release:</strong> Directional adhesion resists shear but releases when peeled</li>
+                                <li><strong>Gentle Contact:</strong> Secure attachment without significant pressure</li>
+                            </ul>
+                            <h3>Space Applications:</h3>
+                            <ul>
+                                <li>Captures varied materials and geometries of orbital debris</li>
+                                <li>Clean, reusable, non-destructive attachment method</li>
+                                <li>Tested on International Space Station by NASA JPL and Stanford</li>
+                                <li>Essential for microgravity debris collection</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2024 ORCA - Orbital Recycling & Capture Apparatus</p>
+        </footer>
+    </div>
+
+    <script src="technologies.js"></script>
+</body>
+</html>
