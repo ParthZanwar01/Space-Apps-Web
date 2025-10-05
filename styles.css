@@ -127,7 +127,6 @@ body {
 
 .component-description-area.active {
     display: block;
-    background: linear-gradient(145deg, #ffdd44 0%, #ffaa00 100%);
 }
 
 .component-description-area:not(.active) {
